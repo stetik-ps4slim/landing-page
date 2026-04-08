@@ -1,66 +1,23 @@
-import { MovementScreeningDashboard } from "@/components/movement-screening-dashboard";
-import {
-  hasSupabaseConfig,
-  sampleClients,
-  type ScreeningClient
-} from "@/lib/movement-screening";
-import { createSupabaseAdminClient } from "@/lib/supabase";
+import { AboutSection } from "@/components/sections/about-section";
+import { BookingSection } from "@/components/sections/booking-section";
+import { CtaBanner } from "@/components/sections/cta-banner";
+import { FaqSection } from "@/components/sections/faq-section";
+import { HeroSection } from "@/components/sections/hero-section";
+import { LeadFormSection } from "@/components/sections/lead-form-section";
+import { ResultsSection } from "@/components/sections/results-section";
+import { ServicesSection } from "@/components/sections/services-section";
 
-async function getClients() {
-  if (!hasSupabaseConfig()) {
-    return {
-      clients: sampleClients,
-      isPersistent: false
-    };
-  }
-
-  try {
-    const supabase = createSupabaseAdminClient();
-    const { data, error } = await supabase
-      .from("movement_screenings")
-      .select("*")
-      .order("updated_at", { ascending: false });
-
-    if (error) {
-      throw error;
-    }
-
-    const clients: ScreeningClient[] = (data ?? []).map((record) => ({
-      id: record.id,
-      name: record.name,
-      injury: record.injury,
-      screeningDate: record.screening_date,
-      contact: record.contact,
-      health: record.health,
-      conductedBy: record.conducted_by,
-      warmupNotes: record.warmup_notes,
-      overallNotes: record.overall_notes,
-      sections: record.sections,
-      updatedAt: record.updated_at,
-      createdAt: record.created_at
-    }));
-
-    return {
-      clients: clients.length ? clients : sampleClients,
-      isPersistent: true
-    };
-  } catch (error) {
-    console.error("Failed to load screenings", error);
-
-    return {
-      clients: sampleClients,
-      isPersistent: false
-    };
-  }
-}
-
-export default async function HomePage() {
-  const { clients, isPersistent } = await getClients();
-
+export default function HomePage() {
   return (
-    <MovementScreeningDashboard
-      initialClients={clients}
-      isPersistent={isPersistent}
-    />
+    <main className="overflow-x-hidden">
+      <HeroSection />
+      <AboutSection />
+      <ServicesSection />
+      <ResultsSection />
+      <FaqSection />
+      <LeadFormSection />
+      <BookingSection />
+      <CtaBanner />
+    </main>
   );
 }

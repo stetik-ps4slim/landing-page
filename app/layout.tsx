@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { siteContent } from "@/lib/site-content";
 
 export const metadata: Metadata = {
-  title: "Movement Screening Tracker",
-  description:
-    "Track client movement screening results, notes, scores, and follow-up adjustments in one app."
+  title: `${siteContent.brand.name} | Premium Personal Training`,
+  description: siteContent.hero.subheading
 };
 
 export default function RootLayout({
