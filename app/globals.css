@@ -8,13 +8,14 @@ html {
 
 body {
   font-family: "Avenir Next", "Segoe UI", sans-serif;
-  color-scheme: light;
+  color-scheme: dark;
   background:
-    radial-gradient(circle at 20% 18%, rgba(195, 140, 255, 0.68), transparent 24%),
-    radial-gradient(circle at 58% 28%, rgba(128, 231, 204, 0.5), transparent 22%),
-    radial-gradient(circle at 82% 12%, rgba(118, 57, 255, 0.72), transparent 26%),
-    linear-gradient(180deg, #efe8ff 0%, #ddd4ff 46%, #f6f8ff 100%);
+    radial-gradient(circle at 18% 14%, rgba(210, 168, 108, 0.18), transparent 26%),
+    radial-gradient(circle at 82% 12%, rgba(138, 103, 55, 0.12), transparent 24%),
+    radial-gradient(circle at 50% 100%, rgba(255, 255, 255, 0.04), transparent 28%),
+    linear-gradient(180deg, #0a0a0a 0%, #111111 42%, #050505 100%);
   min-height: 100vh;
+  color: #f6f3ee;
 }
 
 h1,
@@ -42,6 +43,6 @@ h6 {
   }
 
   .panel {
-    @apply rounded-3xl border border-white/10 bg-white/5 backdrop-blur;
+    @apply rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur;
   }
 }
