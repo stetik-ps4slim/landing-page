@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  color-scheme: light;
+  background:
+    radial-gradient(circle at 20% 18%, rgba(195, 140, 255, 0.68), transparent 24%),
+    radial-gradient(circle at 58% 28%, rgba(128, 231, 204, 0.5), transparent 22%),
+    radial-gradient(circle at 82% 12%, rgba(118, 57, 255, 0.72), transparent 26%),
+    linear-gradient(180deg, #efe8ff 0%, #ddd4ff 46%, #f6f8ff 100%);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Arial Narrow", "Avenir Next Condensed", "Franklin Gothic Medium", sans-serif;
+  letter-spacing: 0.03em;
+}
+
+::selection {
+  background: rgba(210, 168, 108, 0.28);
+  color: #f6f3ee;
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .section-space {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .panel {
+    @apply rounded-3xl border border-white/10 bg-white/5 backdrop-blur;
+  }
+}
