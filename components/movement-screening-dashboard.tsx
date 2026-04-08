@@ -336,7 +336,7 @@ export function MovementScreeningDashboard({
           <style>
             body {
               font-family: "Avenir Next", "Segoe UI", sans-serif;
-              color: #1f2544;
+              color: #111111;
               margin: 32px;
               background: #ffffff;
             }
@@ -344,7 +344,7 @@ export function MovementScreeningDashboard({
             .hero {
               padding: 24px;
               border-radius: 24px;
-              background: linear-gradient(180deg, #7e4cff 0%, #4d2ff0 56%, #9ee8cf 100%);
+              background: linear-gradient(180deg, #111111 0%, #2b2b2b 56%, #4a4a4a 100%);
               color: white;
             }
             .meta {
@@ -354,10 +354,10 @@ export function MovementScreeningDashboard({
               margin: 20px 0 28px;
             }
             .card {
-              border: 1px solid #dddaf8;
+              border: 1px solid #d4d4d4;
               border-radius: 18px;
               padding: 14px 16px;
-              background: #f8f6ff;
+              background: #f5f5f5;
             }
             .section {
               margin-top: 24px;
@@ -369,21 +369,21 @@ export function MovementScreeningDashboard({
               margin-top: 12px;
             }
             th, td {
-              border: 1px solid #dddaf8;
+              border: 1px solid #d4d4d4;
               padding: 10px;
               text-align: left;
               vertical-align: top;
               font-size: 14px;
             }
             th {
-              background: #f1edff;
+              background: #ebebeb;
             }
             .note {
               margin-top: 20px;
               padding: 14px 16px;
               border-radius: 18px;
-              background: #f6fffb;
-              border: 1px solid #d0efe5;
+              background: #f5f5f5;
+              border: 1px solid #d4d4d4;
             }
             @media print {
               body { margin: 14mm; }
@@ -419,24 +419,20 @@ export function MovementScreeningDashboard({
   }
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_20%_14%,rgba(196,127,255,0.55),transparent_20%),radial-gradient(circle_at_52%_26%,rgba(147,246,214,0.35),transparent_18%),radial-gradient(circle_at_80%_16%,rgba(91,31,255,0.48),transparent_24%),linear-gradient(180deg,#f3edff_0%,#e4dbff_40%,#f8fbff_100%)] text-slate-900">
+    <main className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_20%_14%,rgba(255,255,255,0.18),transparent_20%),radial-gradient(circle_at_52%_26%,rgba(180,180,180,0.12),transparent_18%),radial-gradient(circle_at_80%_16%,rgba(110,110,110,0.18),transparent_24%),linear-gradient(180deg,#f6f6f6_0%,#e2e2e2_40%,#fafafa_100%)] text-slate-900">
       <PillBackdrop />
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
-        <section className="overflow-hidden rounded-[2rem] border border-white/60 bg-white/35 p-6 shadow-[0_30px_90px_rgba(110,74,255,0.18)] backdrop-blur-xl sm:p-8">
+        <section className="overflow-hidden rounded-[2rem] border border-white/70 bg-white/55 p-6 shadow-[0_30px_90px_rgba(0,0,0,0.12)] backdrop-blur-xl sm:p-8">
           <div className="grid gap-6 lg:grid-cols-[1.3fr_0.7fr]">
             <div className="space-y-5">
-              <div className="inline-flex w-fit items-center rounded-full border border-white/70 bg-white/45 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-violet-900">
+              <div className="inline-flex w-fit items-center rounded-full border border-slate-300 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-slate-800">
                 Movement Screening Tracker
               </div>
               <div className="space-y-3">
                 <h1 className="max-w-4xl text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl">
-                  Track every client screening in one place.
+                  Movement Screning "Upper Notch"
                 </h1>
-                <p className="max-w-3xl text-base leading-7 text-slate-700 sm:text-lg">
-                  Search by client name, sort your records, sync online when Supabase is
-                  connected, and export each client to PDF with the browser print dialog.
-                </p>
               </div>
               <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
                 <StatCard label="Clients" value={String(stats.totalClients)} />
@@ -446,25 +442,25 @@ export function MovementScreeningDashboard({
               </div>
             </div>
 
-            <div className="rounded-[1.75rem] border border-white/50 bg-[linear-gradient(180deg,rgba(108,43,255,0.92)_0%,rgba(72,48,235,0.88)_44%,rgba(125,232,205,0.62)_100%)] p-5 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_20px_60px_rgba(95,56,255,0.26)] sm:p-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-violet-100/85">
+            <div className="rounded-[1.75rem] border border-slate-300 bg-[linear-gradient(180deg,#111111_0%,#2b2b2b_44%,#4a4a4a_100%)] p-5 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_20px_60px_rgba(0,0,0,0.22)] sm:p-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-200">
                 Save + Export
               </p>
               <div className="mt-4 space-y-3 text-sm leading-6 text-white/85">
                 <div className="rounded-[1.25rem] border border-white/15 bg-white/10 p-4 backdrop-blur">
-                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-violet-50">
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-100">
                     Storage mode
                   </p>
                   <p className="mt-1">{isPersistent ? "Cloud sync enabled" : "Browser-only saving"}</p>
                 </div>
                 <div className="rounded-[1.25rem] border border-white/15 bg-white/10 p-4 backdrop-blur">
-                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-violet-50">
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-100">
                     Status
                   </p>
                   <p className="mt-1">{statusMessage}</p>
                 </div>
                 <div className="rounded-[1.25rem] border border-white/15 bg-white/10 p-4 backdrop-blur">
-                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-violet-50">
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-100">
                     PDF export
                   </p>
                   <p className="mt-1">
@@ -477,7 +473,7 @@ export function MovementScreeningDashboard({
         </section>
 
         <section className="grid gap-8 xl:grid-cols-[360px_minmax(0,1fr)]">
-          <aside className="rounded-[2rem] border border-white/55 bg-white/38 p-5 shadow-[0_18px_50px_rgba(95,56,255,0.16)] backdrop-blur-xl">
+          <aside className="rounded-[2rem] border border-white/70 bg-white/58 p-5 shadow-[0_18px_50px_rgba(0,0,0,0.1)] backdrop-blur-xl">
             <div className="flex items-center justify-between gap-3">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
@@ -488,7 +484,7 @@ export function MovementScreeningDashboard({
               <button
                 type="button"
                 onClick={handleNewClient}
-                className="rounded-full bg-[linear-gradient(180deg,#7c4dff_0%,#4c2dff_100%)] px-4 py-2 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(87,54,255,0.28)] transition hover:brightness-110"
+                className="rounded-full bg-slate-950 px-4 py-2 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(0,0,0,0.22)] transition hover:bg-slate-800"
               >
                 New client
               </button>
@@ -538,8 +534,8 @@ export function MovementScreeningDashboard({
                       onClick={() => setSelectedClientId(client.id)}
                       className={`w-full rounded-[1.5rem] border p-4 text-left transition ${
                         isActive
-                          ? "border-transparent bg-[linear-gradient(180deg,rgba(122,69,255,0.96)_0%,rgba(65,28,235,0.92)_70%,rgba(123,230,206,0.72)_140%)] text-white shadow-[0_18px_40px_rgba(95,56,255,0.25)]"
-                          : "border-white/70 bg-white/55 text-slate-900 hover:border-violet-300/60 hover:bg-white/70"
+                          ? "border-slate-900 bg-slate-900 text-white shadow-[0_18px_40px_rgba(0,0,0,0.18)]"
+                          : "border-white/70 bg-white/55 text-slate-900 hover:border-slate-400 hover:bg-white/75"
                       }`}
                     >
                       <div className="flex items-start justify-between gap-3">
@@ -547,7 +543,7 @@ export function MovementScreeningDashboard({
                           <p className="text-lg font-semibold">{client.name}</p>
                           <p
                             className={`mt-1 text-sm ${
-                              isActive ? "text-violet-100/85" : "text-slate-500"
+                              isActive ? "text-slate-300" : "text-slate-500"
                             }`}
                           >
                             {client.injury || "No injury listed"}
@@ -555,7 +551,7 @@ export function MovementScreeningDashboard({
                         </div>
                         <span
                           className={`rounded-full px-3 py-1 text-xs font-semibold ${
-                            isActive ? "bg-white/18 text-white" : "bg-violet-100 text-violet-900"
+                            isActive ? "bg-white/18 text-white" : "bg-slate-200 text-slate-800"
                           }`}
                         >
                           {averageScore ? `${averageScore}/5` : "No score"}
@@ -563,7 +559,7 @@ export function MovementScreeningDashboard({
                       </div>
                       <div
                         className={`mt-3 flex items-center justify-between text-sm ${
-                          isActive ? "text-violet-100/85" : "text-slate-500"
+                          isActive ? "text-slate-300" : "text-slate-500"
                         }`}
                       >
                         <span>
@@ -575,14 +571,14 @@ export function MovementScreeningDashboard({
                   );
                 })
               ) : (
-                <div className="rounded-[1.5rem] border border-dashed border-violet-300/40 bg-white/40 p-5 text-sm text-slate-600">
+                <div className="rounded-[1.5rem] border border-dashed border-slate-400/50 bg-white/50 p-5 text-sm text-slate-600">
                   No clients match that search yet.
                 </div>
               )}
             </div>
           </aside>
 
-          <section className="rounded-[2rem] border border-white/55 bg-white/38 p-5 shadow-[0_18px_50px_rgba(95,56,255,0.16)] backdrop-blur-xl sm:p-6">
+          <section className="rounded-[2rem] border border-white/70 bg-white/58 p-5 shadow-[0_18px_50px_rgba(0,0,0,0.1)] backdrop-blur-xl sm:p-6">
             {selectedClient ? (
               <div className="space-y-8">
                 <div className="flex flex-col gap-4 border-b border-slate-900/10 pb-6 lg:flex-row lg:items-end lg:justify-between">
@@ -605,14 +601,14 @@ export function MovementScreeningDashboard({
                     <button
                       type="button"
                       onClick={() => handlePrint(selectedClient)}
-                      className="rounded-full bg-[linear-gradient(180deg,#7c4dff_0%,#4c2dff_100%)] px-4 py-2 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(87,54,255,0.28)] transition hover:brightness-110"
+                      className="rounded-full bg-slate-950 px-4 py-2 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(0,0,0,0.22)] transition hover:bg-slate-800"
                     >
                       Print / Save PDF
                     </button>
                     <button
                       type="button"
                       onClick={() => handleDeleteClient(selectedClient.id)}
-                      className="rounded-full border border-rose-400/30 bg-white/60 px-4 py-2 text-sm font-semibold text-rose-700 transition hover:bg-rose-50"
+                      className="rounded-full border border-slate-400/40 bg-white/70 px-4 py-2 text-sm font-semibold text-slate-800 transition hover:bg-slate-100"
                     >
                       Delete client
                     </button>
@@ -620,7 +616,7 @@ export function MovementScreeningDashboard({
                 </div>
 
                 {showPrintHint ? (
-                  <div className="rounded-[1.35rem] border border-amber-300/50 bg-amber-50/80 px-4 py-3 text-sm text-amber-900">
+                  <div className="rounded-[1.35rem] border border-slate-400/40 bg-slate-100 px-4 py-3 text-sm text-slate-800">
                     Please allow pop-ups for this site so the print/PDF view can open.
                   </div>
                 ) : null}
@@ -731,7 +727,7 @@ export function MovementScreeningDashboard({
                   {selectedClient.sections.map((section, sectionIndex) => (
                     <div
                       key={section.title}
-                      className="rounded-[1.75rem] border border-white/60 bg-white/55 p-4 shadow-[0_10px_30px_rgba(95,56,255,0.08)] sm:p-5"
+                      className="rounded-[1.75rem] border border-white/70 bg-white/65 p-4 shadow-[0_10px_30px_rgba(0,0,0,0.06)] sm:p-5"
                     >
                       <div className="flex items-center justify-between gap-4">
                         <div>
@@ -740,7 +736,7 @@ export function MovementScreeningDashboard({
                             Update observations, notes, dates, and movement score.
                           </p>
                         </div>
-                        <div className="rounded-full bg-[linear-gradient(180deg,#7a55ff_0%,#4e35ee_100%)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white">
+                        <div className="rounded-full bg-slate-900 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white">
                           {section.tests.filter((test) => test.completed).length}/
                           {section.tests.length} done
                         </div>
@@ -750,7 +746,7 @@ export function MovementScreeningDashboard({
                         {section.tests.map((test, testIndex) => (
                           <article
                             key={`${section.title}-${test.name}`}
-                            className="rounded-[1.25rem] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.78)_0%,rgba(242,237,255,0.82)_100%)] p-4"
+                            className="rounded-[1.25rem] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.92)_0%,rgba(242,242,242,0.96)_100%)] p-4"
                           >
                             <div className="grid gap-4 xl:grid-cols-[1.1fr_0.9fr]">
                               <div className="space-y-4">
@@ -763,7 +759,7 @@ export function MovementScreeningDashboard({
                                       Mark this test complete and record the result.
                                     </p>
                                   </div>
-                                  <label className="inline-flex items-center gap-2 rounded-full border border-violet-200/70 bg-white/80 px-3 py-2 text-sm font-medium text-slate-700">
+                                  <label className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white/90 px-3 py-2 text-sm font-medium text-slate-700">
                                     <input
                                       type="checkbox"
                                       checked={test.completed}
@@ -778,7 +774,7 @@ export function MovementScreeningDashboard({
                                           })
                                         )
                                       }
-                                      className="h-4 w-4 accent-violet-700"
+                                      className="h-4 w-4 accent-slate-900"
                                     />
                                     Completed
                                   </label>
@@ -879,7 +875,7 @@ export function MovementScreeningDashboard({
                 </div>
               </div>
             ) : (
-              <div className="flex min-h-[420px] items-center justify-center rounded-[1.5rem] border border-dashed border-violet-300/40 bg-white/45 p-8 text-center text-slate-600">
+              <div className="flex min-h-[420px] items-center justify-center rounded-[1.5rem] border border-dashed border-slate-400/50 bg-white/55 p-8 text-center text-slate-600">
                 Add your first client to start tracking movement screening results.
               </div>
             )}
@@ -893,13 +889,13 @@ export function MovementScreeningDashboard({
 function PillBackdrop() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      <div className="absolute -left-12 top-0 h-[92vh] w-28 rounded-full bg-[linear-gradient(180deg,rgba(192,125,255,0.75)_0%,rgba(81,26,255,0.95)_34%,rgba(123,206,255,0.75)_64%,rgba(241,244,255,0.95)_100%)] blur-[2px]" />
-      <div className="absolute left-[12%] top-0 h-[78vh] w-36 rounded-full bg-[linear-gradient(180deg,rgba(205,141,255,0.78)_0%,rgba(81,16,255,0.98)_38%,rgba(122,226,206,0.7)_70%,rgba(246,248,255,0.96)_100%)] shadow-[0_0_35px_rgba(149,104,255,0.4)]" />
-      <div className="absolute left-[32%] top-0 h-[44vh] w-40 rounded-[999px] bg-[linear-gradient(180deg,rgba(78,28,255,0.98)_0%,rgba(112,164,255,0.82)_58%,rgba(179,240,210,0.85)_100%)] shadow-[0_0_45px_rgba(131,84,255,0.38)]" />
-      <div className="absolute left-[35%] top-[38vh] h-40 w-40 rounded-full bg-[radial-gradient(circle_at_30%_30%,rgba(112,181,255,0.9),rgba(130,231,206,0.92)_60%,rgba(198,255,227,0.95)_100%)] shadow-[0_0_50px_rgba(160,132,255,0.35)]" />
-      <div className="absolute left-[34%] top-[54vh] h-[44vh] w-40 rounded-[999px] bg-[linear-gradient(180deg,rgba(240,234,255,0.55)_0%,rgba(136,92,255,0.9)_70%,rgba(93,47,236,0.98)_100%)] shadow-[0_0_45px_rgba(147,108,255,0.28)]" />
-      <div className="absolute right-[16%] top-0 h-[88vh] w-36 rounded-full bg-[linear-gradient(180deg,rgba(196,128,255,0.8)_0%,rgba(85,20,255,0.98)_36%,rgba(118,204,255,0.75)_68%,rgba(247,249,255,0.96)_100%)] shadow-[0_0_40px_rgba(138,95,255,0.34)]" />
-      <div className="absolute -right-10 top-0 h-[100vh] w-32 rounded-full bg-[linear-gradient(180deg,rgba(200,136,255,0.7)_0%,rgba(75,14,255,0.98)_34%,rgba(104,155,255,0.8)_62%,rgba(175,239,208,0.72)_82%,rgba(245,248,255,0.96)_100%)] shadow-[0_0_40px_rgba(129,86,255,0.28)]" />
+      <div className="absolute -left-12 top-0 h-[92vh] w-28 rounded-full bg-[linear-gradient(180deg,rgba(245,245,245,0.9)_0%,rgba(120,120,120,0.9)_40%,rgba(230,230,230,0.95)_100%)] blur-[2px]" />
+      <div className="absolute left-[12%] top-0 h-[78vh] w-36 rounded-full bg-[linear-gradient(180deg,rgba(255,255,255,0.92)_0%,rgba(90,90,90,0.95)_42%,rgba(238,238,238,0.96)_100%)] shadow-[0_0_35px_rgba(0,0,0,0.18)]" />
+      <div className="absolute left-[32%] top-0 h-[44vh] w-40 rounded-[999px] bg-[linear-gradient(180deg,rgba(60,60,60,0.98)_0%,rgba(150,150,150,0.82)_58%,rgba(235,235,235,0.9)_100%)] shadow-[0_0_45px_rgba(0,0,0,0.16)]" />
+      <div className="absolute left-[35%] top-[38vh] h-40 w-40 rounded-full bg-[radial-gradient(circle_at_30%_30%,rgba(210,210,210,0.96),rgba(150,150,150,0.92)_60%,rgba(245,245,245,0.98)_100%)] shadow-[0_0_50px_rgba(0,0,0,0.14)]" />
+      <div className="absolute left-[34%] top-[54vh] h-[44vh] w-40 rounded-[999px] bg-[linear-gradient(180deg,rgba(245,245,245,0.75)_0%,rgba(140,140,140,0.85)_70%,rgba(55,55,55,0.98)_100%)] shadow-[0_0_45px_rgba(0,0,0,0.14)]" />
+      <div className="absolute right-[16%] top-0 h-[88vh] w-36 rounded-full bg-[linear-gradient(180deg,rgba(255,255,255,0.92)_0%,rgba(85,85,85,0.95)_40%,rgba(236,236,236,0.96)_100%)] shadow-[0_0_40px_rgba(0,0,0,0.16)]" />
+      <div className="absolute -right-10 top-0 h-[100vh] w-32 rounded-full bg-[linear-gradient(180deg,rgba(245,245,245,0.9)_0%,rgba(70,70,70,0.96)_38%,rgba(160,160,160,0.82)_66%,rgba(245,245,245,0.96)_100%)] shadow-[0_0_40px_rgba(0,0,0,0.14)]" />
     </div>
   );
 }
@@ -976,4 +972,4 @@ function escapeHtml(value: string) {
 }
 
 const inputClassName =
-  "w-full rounded-2xl border border-white/70 bg-white/72 px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-violet-300 focus:ring-2 focus:ring-violet-300/30";
+  "w-full rounded-2xl border border-slate-300 bg-white/88 px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-slate-500 focus:ring-2 focus:ring-slate-300/40";
