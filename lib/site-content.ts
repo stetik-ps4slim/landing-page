@@ -4,7 +4,7 @@ export const siteContent = {
     shortName: "Upper Notch",
     eyebrow: "Upper Notch Coaching - Richmond, Melbourne",
     consultationLink: "https://calendly.com/theuppernotch",
-    consultationLabel: "Book Private Consultation",
+    consultationLabel: "Book Consultation",
     applicationLabel: "Apply for Coaching",
     location: "Richmond, Melbourne, Victoria"
   },
@@ -180,7 +180,7 @@ export const siteContent = {
     ]
   },
   leadForm: {
-    title: "Apply for coaching and see if there is a fit.",
+    title: "Apply for coaching and see if you're the right fit.",
     description:
       "This is not a generic gym enquiry. It is a short application for people who are serious about changing how they look, perform, and show up. If it looks like a strong fit, the next step is a private consultation.",
     note:
