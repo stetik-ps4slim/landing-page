@@ -1,5 +1,6 @@
 import { AboutSection } from "@/components/sections/about-section";
 import { BookingSection } from "@/components/sections/booking-section";
+import { CostOfWaitingSection } from "@/components/sections/cost-of-waiting-section";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { FaqSection } from "@/components/sections/faq-section";
 import { HeroSection } from "@/components/sections/hero-section";
@@ -13,6 +14,7 @@ export default function HomePage() {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
+      <CostOfWaitingSection />
       <ResultsSection />
       <FaqSection />
       <LeadFormSection />
