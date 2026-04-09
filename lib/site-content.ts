@@ -195,6 +195,6 @@ export const siteContent = {
     title:
       "Reach your potential. Are you ready to turn it up a notch?",
     description:
-      "Transform your routine, not just your workouts. Book your consultation today.""
+      "Transform your routine, not just your workouts. Book your consultation today."
   }
 } as const;
