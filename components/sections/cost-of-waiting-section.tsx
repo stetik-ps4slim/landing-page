@@ -28,7 +28,6 @@ const comparisonRows = [
 const details = {
   now: {
     label: "Pay Now",
-    kicker: "Cost vs Price",
     title: "The price is what you pay now.",
     body:
       "You invest in structure, accountability, coaching, and a clear plan. It is a decision that costs once and keeps paying you back in confidence, energy, and momentum.",
@@ -40,7 +39,6 @@ const details = {
   },
   later: {
     label: "Pay Later",
-    kicker: "Cost vs Price",
     title: "The cost is what you pay six months later by staying the same.",
     body:
       "More frustration. More inconsistency. More time lost second-guessing what to do. The longer the problem stays unsolved, the more it quietly costs you in confidence, energy, and progress.",
@@ -86,65 +84,19 @@ export function CostOfWaitingSection() {
           </div>
 
           <div className="mt-8 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-            <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-black/30">
-              <div className="grid grid-cols-2">
-                <div className="min-h-[420px] bg-[#17120d] p-6 sm:p-8">
-                  <p className="text-sm font-semibold uppercase tracking-[0.25em] text-accent">
-                    Pay Now
-                  </p>
-                  <div className="mt-6 space-y-6">
-                    {comparisonRows.map((row) => (
-                      <div key={row.label} className="grid grid-cols-[0.9fr_1.4fr] gap-4 border-t border-white/10 pt-4 first:border-t-0 first:pt-0">
-                        <p className="text-sm font-semibold text-zinc-400">{row.label}</p>
-                        <p className="text-sm leading-6 text-zinc-100">{row.now}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="min-h-[420px] bg-[#111111] p-6 sm:p-8">
-                  <p className="text-sm font-semibold uppercase tracking-[0.25em] text-zinc-300">
-                    Pay Later
-                  </p>
-                  <div className="mt-6 space-y-6">
-                    {comparisonRows.map((row) => (
-                      <div key={row.label} className="grid grid-cols-[0.9fr_1.4fr] gap-4 border-t border-white/10 pt-4 first:border-t-0 first:pt-0">
-                        <p className="text-sm font-semibold text-zinc-500">{row.label}</p>
-                        <p className="text-sm leading-6 text-zinc-300">{row.later}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+            <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 bg-black/30 p-6 sm:p-8">
+              <div className="pointer-events-none absolute inset-0 grid grid-cols-2">
+                <div className="bg-[#17120d]" />
+                <div className="bg-[#101010]" />
               </div>
 
               <div
-                className="pointer-events-none absolute inset-y-0 left-0 overflow-hidden border-r-2 border-accent"
-                style={{ width: `${position}%` }}
-              >
-                <div className="grid h-full w-[200%] grid-cols-2">
-                  <div className="min-h-[420px] bg-[#17120d] p-6 sm:p-8">
-                    <p className="text-sm font-semibold uppercase tracking-[0.25em] text-accent">
-                      Pay Now
-                    </p>
-                    <div className="mt-6 space-y-6">
-                      {comparisonRows.map((row) => (
-                        <div key={row.label} className="grid grid-cols-[0.9fr_1.4fr] gap-4 border-t border-white/10 pt-4 first:border-t-0 first:pt-0">
-                          <p className="text-sm font-semibold text-zinc-400">{row.label}</p>
-                          <p className="text-sm leading-6 text-zinc-100">{row.now}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="min-h-[420px] bg-[#111111] p-6 sm:p-8" />
-                </div>
-              </div>
-
-              <div
-                className="pointer-events-none absolute inset-y-0 z-20 flex -translate-x-1/2 items-center"
+                className="pointer-events-none absolute inset-y-0 z-10 flex -translate-x-1/2 items-center"
                 style={{ left: `${position}%` }}
               >
-                <div className="flex h-14 w-8 items-center justify-center rounded-full bg-accent text-canvas shadow-[0_12px_30px_rgba(210,168,108,0.35)]">
-                  <span className="text-lg leading-none">|||</span>
+                <div className="h-full w-px bg-accent/80" />
+                <div className="absolute left-1/2 top-1/2 flex h-14 w-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-accent text-canvas shadow-[0_12px_30px_rgba(210,168,108,0.35)]">
+                  <span className="text-base font-semibold leading-none">|||</span>
                 </div>
               </div>
 
@@ -155,13 +107,35 @@ export function CostOfWaitingSection() {
                 max="85"
                 value={position}
                 onChange={(event) => setPosition(Number(event.target.value))}
-                className="compare-slider absolute inset-y-0 left-0 z-30 h-full w-full cursor-ew-resize appearance-none bg-transparent"
+                className="compare-slider absolute inset-0 z-20 h-full w-full cursor-ew-resize appearance-none bg-transparent"
               />
+
+              <div className="relative z-0">
+                <div className="grid grid-cols-2 gap-4 border-b border-white/10 pb-5">
+                  <p className={`text-sm font-semibold uppercase tracking-[0.25em] ${activeSide === "now" ? "text-accent" : "text-zinc-500"}`}>
+                    Pay Now
+                  </p>
+                  <p className={`text-right text-sm font-semibold uppercase tracking-[0.25em] ${activeSide === "later" ? "text-accent" : "text-zinc-500"}`}>
+                    Pay Later
+                  </p>
+                </div>
+
+                <div className="mt-5 space-y-5">
+                  {comparisonRows.map((row) => (
+                    <div key={row.label} className="grid grid-cols-[0.8fr_1.4fr] gap-4 border-t border-white/10 pt-5 first:border-t-0 first:pt-0">
+                      <p className="text-sm font-semibold text-zinc-500">{row.label}</p>
+                      <p className="text-sm leading-7 text-zinc-100 transition duration-200">
+                        {activeSide === "now" ? row.now : row.later}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
             <div className="space-y-4">
               <div className="rounded-[1.75rem] border border-white/10 bg-black/30 p-6 sm:p-8">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">{active.kicker}</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">Cost vs Price</p>
                 <h3 className="mt-4 text-3xl uppercase leading-none text-ink sm:text-4xl">{active.title}</h3>
                 <p className="mt-5 text-base leading-8 text-zinc-300">{active.body}</p>
               </div>
