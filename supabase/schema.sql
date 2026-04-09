@@ -88,3 +88,55 @@ on public.movement_screenings
 for all
 using (auth.role() = 'service_role')
 with check (auth.role() = 'service_role');
+
+create table if not exists public.consultation_needs (
+  id bigint generated always as identity primary key,
+  client_name text not null,
+  client_email text not null default '',
+  client_phone text not null default '',
+  goal text not null default '',
+  consultation_date date,
+  form_data jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default timezone('utc', now()),
+  updated_at timestamptz not null default timezone('utc', now())
+);
+
+alter table public.consultation_needs
+  add column if not exists client_email text not null default '',
+  add column if not exists client_phone text not null default '',
+  add column if not exists goal text not null default '',
+  add column if not exists consultation_date date,
+  add column if not exists form_data jsonb not null default '{}'::jsonb,
+  add column if not exists created_at timestamptz not null default timezone('utc', now()),
+  add column if not exists updated_at timestamptz not null default timezone('utc', now());
+
+create index if not exists consultation_needs_client_email_idx
+  on public.consultation_needs (client_email);
+
+create index if not exists consultation_needs_client_phone_idx
+  on public.consultation_needs (client_phone);
+
+create or replace function public.set_consultation_needs_updated_at()
+returns trigger
+language plpgsql
+as $$
+begin
+  new.updated_at = timezone('utc', now());
+  return new;
+end;
+$$;
+
+drop trigger if exists set_consultation_needs_updated_at on public.consultation_needs;
+
+create trigger set_consultation_needs_updated_at
+before update on public.consultation_needs
+for each row
+execute function public.set_consultation_needs_updated_at();
+
+alter table public.consultation_needs enable row level security;
+
+create policy "Service role can manage consultation needs"
+on public.consultation_needs
+for all
+using (auth.role() = 'service_role')
+with check (auth.role() = 'service_role');
