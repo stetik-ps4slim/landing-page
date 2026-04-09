@@ -21,10 +21,16 @@ export function HeroSection() {
             {siteContent.hero.subheading}
           </p>
 
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
             <Button href={siteContent.brand.consultationLink} target="_blank" rel="noreferrer">
               Book Your Consultation
             </Button>
+            <a
+              href="/consultation-needs"
+              className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-ink transition hover:border-accent hover:text-accent"
+            >
+              Open Consultation App
+            </a>
             <a
               href="#services"
               className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-ink transition hover:border-accent hover:text-accent"
