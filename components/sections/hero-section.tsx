@@ -22,14 +22,14 @@ export function HeroSection() {
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-            <Button href={siteContent.brand.consultationLink} target="_blank" rel="noreferrer">
-              Book Your Consultation
-            </Button>
+            <Button href="#lead-form">{siteContent.brand.applicationLabel}</Button>
             <a
-              href="#services"
+              href={siteContent.brand.consultationLink}
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-ink transition hover:border-accent hover:text-accent"
             >
-              View Coaching Options
+              {siteContent.brand.consultationLabel}
             </a>
           </div>
 

@@ -67,6 +67,8 @@ export function LeadFormSection() {
             description={siteContent.leadForm.description}
           />
           <div className="mt-8 panel p-6">
+            <p className="text-sm leading-7 text-zinc-300">{siteContent.leadForm.note}</p>
+            <div className="mt-6 h-px bg-white/10" />
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-accent">
               Best Fit Clients
             </p>
@@ -154,7 +156,7 @@ export function LeadFormSection() {
             ) : null}
 
             <Button type="submit" className="w-full sm:w-auto" disabled={isSubmitting}>
-              {isSubmitting ? "Submitting..." : "Book My Consultation"}
+              {isSubmitting ? "Submitting..." : siteContent.brand.applicationLabel}
             </Button>
           </form>
         </div>

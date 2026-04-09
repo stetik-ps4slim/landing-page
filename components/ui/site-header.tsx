@@ -10,10 +10,10 @@ export function SiteHeader() {
 
       <div className="flex flex-wrap items-center gap-3 sm:justify-end">
         <a
-          href="/consultation-needs"
+          href="#lead-form"
           className="inline-flex items-center justify-center rounded-full border border-white/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-ink transition hover:border-accent hover:text-accent"
         >
-          Consultation App
+          {siteContent.brand.applicationLabel}
         </a>
         <Button href={siteContent.brand.consultationLink} className="px-4 py-2 text-xs" target="_blank" rel="noreferrer">
           {siteContent.brand.consultationLabel}

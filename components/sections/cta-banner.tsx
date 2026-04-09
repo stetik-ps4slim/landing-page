@@ -18,8 +18,8 @@ export function CtaBanner() {
                 {siteContent.cta.description}
               </p>
             </div>
-            <Button href={siteContent.brand.consultationLink} target="_blank" rel="noreferrer">
-              {siteContent.brand.consultationLabel}
+            <Button href="#lead-form">
+              {siteContent.brand.applicationLabel}
             </Button>
           </div>
         </div>

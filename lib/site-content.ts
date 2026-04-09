@@ -4,7 +4,8 @@ export const siteContent = {
     shortName: "Upper Notch",
     eyebrow: "Upper Notch Coaching - Richmond, Melbourne",
     consultationLink: "https://calendly.com/theuppernotch",
-    consultationLabel: "Book Consultation",
+    consultationLabel: "Book Private Consultation",
+    applicationLabel: "Apply for Coaching",
     location: "Richmond, Melbourne, Victoria"
   },
   hero: {
@@ -48,7 +49,7 @@ export const siteContent = {
             idealFor:
               "For building consistency, confidence, and a strong baseline with expert guidance each week.",
             savings: "Save $172 with upfront payment",
-            ctaLabel: "Book Consultation",
+            ctaLabel: "Book Private Consultation",
             badge: "",
             featured: false
           },
@@ -59,7 +60,7 @@ export const siteContent = {
             idealFor:
               "For clients ready to make noticeable physique and performance changes with more support, more accountability, and more momentum.",
             savings: "Save $432 with upfront payment",
-            ctaLabel: "Book Consultation",
+            ctaLabel: "Book Private Consultation",
             featured: true,
             badge: "Most Popular"
           },
@@ -70,7 +71,7 @@ export const siteContent = {
             idealFor:
               "For clients who want the highest level of in-person coaching, tighter accountability, and the fastest path to results.",
             savings: "Save $632 with upfront payment",
-            ctaLabel: "Book Consultation",
+            ctaLabel: "Book Private Consultation",
             badge: "",
             featured: false
           }
@@ -86,7 +87,7 @@ export const siteContent = {
             idealFor:
               "For clients who want the flexibility of online coaching with the added edge of in-person support and accountability.",
             savings: "Save $252 with upfront payment",
-            ctaLabel: "Book Consultation",
+            ctaLabel: "Book Private Consultation",
             badge: "",
             featured: false
           }
@@ -118,7 +119,7 @@ export const siteContent = {
             idealFor:
               "For clients who want their nutrition aligned with their training through tailored calorie and macro targets, food guidance, and ongoing adjustments.",
             savings: "",
-            ctaLabel: "Book Consultation",
+            ctaLabel: "Book Private Consultation",
             badge: "",
             featured: false
           }
@@ -179,9 +180,11 @@ export const siteContent = {
     ]
   },
   leadForm: {
-    title: "Start with a focused conversation about your next phase.",
+    title: "Apply for coaching and see if there is a fit.",
     description:
-      "If you are ready to train with more intent, more structure, and a higher standard, this is the next step. Share your details and main goal, and Upper Notch Coaching will be in touch to guide you toward the right option.",
+      "This is not a generic gym enquiry. It is a short application for people who are serious about changing how they look, perform, and show up. If it looks like a strong fit, the next step is a private consultation.",
+    note:
+      "Applications are reviewed personally. Coaching spots are kept limited so every client gets a high standard of attention.",
     fitPoints: [
       "Busy professionals who want a clear plan and strong accountability",
       "Men and women aiming to lose fat, build muscle, or lift performance",
@@ -189,9 +192,9 @@ export const siteContent = {
     ]
   },
   booking: {
-    title: "Prefer to lock in a consultation time right away?",
+    title: "Book a private consultation.",
     description:
-      "Use the booking calendar below to schedule a consultation. If you would rather be contacted first, the enquiry form is still the best option."
+      "If you already know you are ready, you can book a private consultation directly. This is the best option for people who want clarity quickly and are prepared to move."
   },
   cta: {
     title: "Reach your potential. Are you ready to turn it up a notch?",
