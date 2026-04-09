@@ -18,25 +18,25 @@ export const siteContent = {
     ]
   },
   about: {
-    title: "Coaching for people who want results without wasting time.",
+    title: "High-standard coaching for people who want more from themselves.",
     description:
-      "You do not need another random workout plan or generic meal template. You need a system that gives you clarity, consistency, and accountability, backed by coaching that improves how you look, feel, and perform.",
+      "Upper Notch Coaching is built for people who want serious progress without letting training take over their life. The goal is simple: create a stronger body, a sharper mindset, and a standard you can carry into work, relationships, and everything else that matters.",
     coachName: "Jazzay Sallah",
     coachRole: "Personal Trainer",
     coachCardText:
-      "Helping clients unlock their full potential in and out of the gym through structure, discipline, and evidence-based coaching.",
+      "Evidence-based coaching for clients who want structure, discipline, and results that actually last.",
     points: [
-      "Training builds more than muscle. It builds confidence, discipline, and a mindset that carries into every area of life.",
-      "Jazzay specialises in strength training, combining functional movement and aerobic performance to drive fat loss, muscle gain, and improved fitness.",
-      "With Cert III and IV in Fitness, every program is built on evidence-based principles focused on long-term progress and real, lasting results.",
-      "As a certified nutrition coach, Jazzay also provides personalised meal plans to improve training, recovery, and overall health."
+      "Training here is not random. Every phase is built around your current level, your lifestyle, and the result you are chasing.",
+      "Jazzay combines strength training, functional movement, and aerobic performance to improve body composition, fitness, and confidence at the same time.",
+      "With Cert III and IV in Fitness, coaching is grounded in proven principles, not trends, shortcuts, or guesswork.",
+      "Nutrition support is part of the standard. Clients get practical guidance and personalised direction that supports performance, recovery, and long-term results."
     ],
     closing: "Look good. Feel good. Perform at your best."
   },
   services: {
-    title: "Choose your level of commitment.",
+    title: "Choose the level of coaching that matches your standard.",
     description:
-      "All options deliver results. The difference is how fast you get there, how much support you have, and how accountable you stay.",
+      "Every option is designed to create momentum. The difference is the speed of progress, the level of support, and how closely you want your training held to a higher standard.",
     categories: [
       {
         name: "In-Person Coaching",
@@ -45,7 +45,8 @@ export const siteContent = {
             name: "Foundation",
             price: "From $129/week",
             minimumTerm: "12-week minimum",
-            idealFor: "Perfect for building routine, confidence, and sustainable progress.",
+            idealFor:
+              "For building consistency, confidence, and a strong baseline with expert guidance each week.",
             savings: "Save $172 with upfront payment",
             ctaLabel: "Book Consultation",
             badge: "",
@@ -56,7 +57,7 @@ export const siteContent = {
             price: "From $199/week",
             minimumTerm: "12-week minimum",
             idealFor:
-              "Best for noticeable physique and performance changes with structured support.",
+              "For clients ready to make noticeable physique and performance changes with more support, more accountability, and more momentum.",
             savings: "Save $432 with upfront payment",
             ctaLabel: "Book Consultation",
             featured: true,
@@ -66,7 +67,8 @@ export const siteContent = {
             name: "Elite",
             price: "From $289/week",
             minimumTerm: "12-week minimum",
-            idealFor: "For clients who want the fastest results with full coaching and accountability.",
+            idealFor:
+              "For clients who want the highest level of in-person coaching, tighter accountability, and the fastest path to results.",
             savings: "Save $632 with upfront payment",
             ctaLabel: "Book Consultation",
             badge: "",
@@ -82,7 +84,7 @@ export const siteContent = {
             price: "From $149/week",
             minimumTerm: "12-week minimum",
             idealFor:
-              "Combination of in-person sessions and online coaching for flexibility, accountability, and consistent progress.",
+              "For clients who want the flexibility of online coaching with the added edge of in-person support and accountability.",
             savings: "Save $252 with upfront payment",
             ctaLabel: "Book Consultation",
             badge: "",
@@ -98,7 +100,7 @@ export const siteContent = {
             price: "From $59/week",
             minimumTerm: "8-week minimum",
             idealFor:
-              "Personalised training program, weekly check-ins, habit tracking, and ongoing support without in-person sessions.",
+              "For clients who want a structured plan, weekly accountability, and expert direction while training on their own schedule.",
             savings: "Save $80 with upfront payment",
             ctaLabel: "Apply for Coaching",
             badge: "",
@@ -114,7 +116,7 @@ export const siteContent = {
             price: "Add to any coaching option",
             minimumTerm: "",
             idealFor:
-              "Custom nutrition plan tailored to your goals, lifestyle, and preferences. Includes calorie and macro targets, food guidance, and ongoing adjustments.",
+              "For clients who want their nutrition aligned with their training through tailored calorie and macro targets, food guidance, and ongoing adjustments.",
             savings: "",
             ctaLabel: "Book Consultation",
             badge: "",
@@ -150,36 +152,36 @@ export const siteContent = {
     ]
   },
   faq: {
-    title: "Clear answers before you commit.",
+    title: "Everything you need to know before you get started.",
     description:
-      "Premium coaching should feel simple. Here are the main questions clients ask before getting started.",
+      "The right coaching experience should feel clear from the start. These are the questions most people ask before taking the next step.",
     items: [
       {
-        question: "Is this only for advanced gym-goers?",
+        question: "Is this only for people who are already fit?",
         answer:
-          "No. Coaching is tailored to your starting point. Whether you are rebuilding momentum or already training consistently, the plan is adjusted to your level."
+          "No. Upper Notch Coaching is built around your starting point. Whether you are rebuilding momentum or already training consistently, the plan is matched to your level and progressed properly."
       },
       {
-        question: "What if I have a busy schedule?",
+        question: "What if my schedule is busy or inconsistent?",
         answer:
-          "That is exactly who this coaching is built for. Training is structured around your week so the plan is realistic, efficient, and easier to stick to."
+          "That is exactly why the coaching is structured the way it is. The training system is designed to fit around real life so you can stay consistent without everything feeling excessive or unsustainable."
       },
       {
-        question: "Do I get nutrition guidance too?",
+        question: "Will I get nutrition support as well?",
         answer:
-          "Yes. Nutrition support is built into the coaching process, and there is also a dedicated nutrition coaching add-on for more personalised guidance."
+          "Yes. Nutrition is a major part of results. Coaching includes practical nutrition guidance, and there is also a dedicated nutrition coaching add-on for more personalised support."
       },
       {
-        question: "How do I get started?",
+        question: "How do I know which option is right for me?",
         answer:
-          "Submit the consultation form, share your main goal, or book directly through the calendar below. You will then be contacted to confirm fit and availability."
+          "That is what the consultation is for. You will talk through your current situation, your goals, and the level of support that makes the most sense for you."
       }
     ]
   },
   leadForm: {
     title: "Start with a focused conversation about your next phase.",
     description:
-      "If you are serious about improving your physique, performance, and consistency, this is the next step. Share your details and main goal, and Upper Notch Coaching will be in touch to discuss the right option.",
+      "If you are ready to train with more intent, more structure, and a higher standard, this is the next step. Share your details and main goal, and Upper Notch Coaching will be in touch to guide you toward the right option.",
     fitPoints: [
       "Busy professionals who want a clear plan and strong accountability",
       "Men and women aiming to lose fat, build muscle, or lift performance",
@@ -192,8 +194,7 @@ export const siteContent = {
       "Use the booking calendar below to schedule a consultation. If you would rather be contacted first, the enquiry form is still the best option."
   },
   cta: {
-    title:
-      "Reach your potential. Are you ready to turn it up a notch?",
+    title: "Reach your potential. Are you ready to turn it up a notch?",
     description:
       "Transform your routine, not just your workouts. Book your consultation today."
   }
