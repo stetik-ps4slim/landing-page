@@ -2,19 +2,19 @@ export const siteContent = {
   brand: {
     name: "Upper Notch Coaching",
     shortName: "Upper Notch",
-    eyebrow: "Premium Personal Training",
+    eyebrow: "Upper Notch Coaching - Richmond, Melbourne",
     consultationLink: "https://calendly.com/theuppernotch",
     consultationLabel: "Book Consultation",
     location: "Richmond, Melbourne, Victoria"
   },
   hero: {
-    headline: "Build a stronger body with coaching that actually fits your life.",
+    headline: "Build a body and mindset that integrates into every part of your life.",
     subheading:
-      "Upper Notch Coaching helps busy men and women in Richmond, Melbourne lose fat, build muscle, and improve performance through structured training, accountability, and clear direction.",
+      "Upper Notch Coaching helps busy men and women look, feel, and perform at their best through fat loss, strength and muscle gain, improved performance, accountability, and clear, structured direction through evidence-based training. Based in Richmond, Melbourne.",
     highlights: [
-      "Fat loss with structure, not guesswork",
-      "Muscle-building plans built around real life",
-      "Coaching accountability that keeps standards high"
+      "Reach your potential and turn it up a notch",
+      "Transform your routine, not just your workouts",
+      "Evidence-based coaching built for real life"
     ]
   },
   about: {
@@ -193,8 +193,8 @@ export const siteContent = {
   },
   cta: {
     title:
-      "Ready to train with more structure, more accountability, and a higher standard?",
+      "Reach your potential. Are you ready to turn it up a notch?",
     description:
-      "Book a consultation and find the right coaching package for your next phase. Look good. Feel good. Perform at your best."
+      "Transform your routine, not just your workouts. Book your consultation today.""
   }
 } as const;
