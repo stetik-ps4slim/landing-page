@@ -58,3 +58,4 @@ npm run dev
 - Connect the form to email notifications or SMS alerts.
 - Add real client photos, proof metrics, and a consultation calendar integration.
 - Add analytics events for CTA clicks and form completion rate.
+# consultation-needs-app
