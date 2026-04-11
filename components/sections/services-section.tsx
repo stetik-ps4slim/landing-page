@@ -68,7 +68,7 @@ export function ServicesSection() {
                       href={siteContent.brand.consultationLink}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-8 inline-flex w-fit items-center rounded-full border border-white/15 px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-ink transition hover:border-accent hover:text-accent"
+                      className="mt-8 inline-flex w-fit items-center rounded-full border border-accent bg-accent px-5 py-3 text-sm font-extrabold uppercase tracking-[0.18em] text-canvas shadow-[0_14px_35px_rgba(255,210,63,0.28)] transition hover:-translate-y-0.5 hover:bg-[#ffe26f]"
                     >
                       {plan.ctaLabel}
                     </a>

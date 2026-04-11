@@ -12,7 +12,7 @@ export function BookingSection() {
           description={siteContent.booking.description}
         />
 
-        <div className="panel border-accent/25 bg-gradient-to-br from-accent/10 to-white/[0.04] p-6 shadow-glow sm:p-8">
+        <div className="panel border-white/25 bg-white/20 p-6 shadow-glow sm:p-8">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">
             External booking
           </p>
@@ -25,7 +25,7 @@ export function BookingSection() {
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-            <Button href={siteContent.brand.consultationLink} target="_blank" rel="noreferrer">
+            <Button href={siteContent.brand.consultationLink} className="border-accent bg-accent text-canvas shadow-[0_14px_35px_rgba(255,210,63,0.35)] hover:bg-[#ffe26f]" target="_blank" rel="noreferrer">
               {siteContent.brand.consultationLabel}
             </Button>
             <a

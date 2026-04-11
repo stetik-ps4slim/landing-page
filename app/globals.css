@@ -7,12 +7,13 @@ html {
 }
 
 body {
-  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-family: "Trebuchet MS", "Avenir Next", "Segoe UI", sans-serif;
   background:
-    radial-gradient(circle at 18% 12%, rgba(255, 210, 63, 0.45), transparent 18%),
-    radial-gradient(circle at 84% 10%, rgba(255, 63, 164, 0.42), transparent 20%),
-    radial-gradient(circle at 54% 4%, rgba(255, 255, 255, 0.55), transparent 16%),
-    linear-gradient(135deg, #13a8ff 0%, #0678d8 38%, #024a9c 72%, #07111f 100%);
+    radial-gradient(circle at 18% 10%, rgba(255, 210, 63, 0.52), transparent 18%),
+    radial-gradient(circle at 84% 8%, rgba(255, 63, 164, 0.5), transparent 22%),
+    radial-gradient(circle at 52% 24%, rgba(255, 255, 255, 0.45), transparent 18%),
+    linear-gradient(180deg, #38bdf8 0%, #168bff 38%, #2b8fff 68%, #69c7ff 100%);
+  background-attachment: fixed;
   min-height: 100vh;
   color: #ffffff;
 }
@@ -24,10 +25,9 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
   background-size: 44px 44px;
-  mask-image: linear-gradient(to bottom, black, transparent 82%);
 }
 
 h1,
@@ -36,12 +36,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Arial Narrow", "Avenir Next Condensed", "Franklin Gothic Medium", sans-serif;
-  letter-spacing: 0.03em;
+  font-family: Impact, "Arial Black", "Avenir Next Condensed", sans-serif;
+  letter-spacing: 0.035em;
 }
 
 ::selection {
-  background: rgba(255, 63, 164, 0.35);
+  background: rgba(255, 63, 164, 0.38);
   color: #ffffff;
 }
 
@@ -55,21 +55,8 @@ h6 {
   }
 
   .panel {
-    @apply rounded-3xl border border-white/15 bg-[#07101d]/85 shadow-glow backdrop-blur;
+    @apply rounded-3xl border border-white/25 bg-sky-500/35 shadow-glow backdrop-blur-xl;
   }
-}
-
-.compare-slider::-webkit-slider-thumb {
-  appearance: none;
-  width: 32px;
-  height: 56px;
-}
-
-.compare-slider::-moz-range-thumb {
-  width: 32px;
-  height: 56px;
-  border: 0;
-  background: transparent;
 }
 
 @media print {
