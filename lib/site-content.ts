@@ -3,7 +3,7 @@ export const siteContent = {
     name: "Upper Notch Coaching",
     shortName: "Upper Notch",
     eyebrow: "Upper Notch Coaching - Richmond, Melbourne",
-    consultationLink: "https://calendly.com/theuppernotch",
+    consultationLink: "https://calendly.com/jazz04092005",
     consultationLabel: "Book Consultation",
     applicationLabel: "Apply for Coaching",
     location: "Richmond, Melbourne, Victoria"
