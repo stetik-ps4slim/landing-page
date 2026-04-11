@@ -9,10 +9,10 @@ html {
 body {
   font-family: "Trebuchet MS", "Avenir Next", "Segoe UI", sans-serif;
   background:
-    radial-gradient(circle at 18% 10%, rgba(255, 210, 63, 0.52), transparent 18%),
-    radial-gradient(circle at 84% 8%, rgba(255, 63, 164, 0.5), transparent 22%),
-    radial-gradient(circle at 52% 24%, rgba(255, 255, 255, 0.45), transparent 18%),
-    linear-gradient(180deg, #38bdf8 0%, #168bff 38%, #2b8fff 68%, #69c7ff 100%);
+    radial-gradient(circle at 18% 10%, rgba(255, 226, 111, 0.46), transparent 18%),
+    radial-gradient(circle at 84% 8%, rgba(255, 91, 183, 0.42), transparent 22%),
+    radial-gradient(circle at 52% 24%, rgba(255, 255, 255, 0.62), transparent 20%),
+    linear-gradient(180deg, #67d8ff 0%, #2ba8ff 36%, #3aa2ff 66%, #8bd8ff 100%);
   background-attachment: fixed;
   min-height: 100vh;
   color: #ffffff;
@@ -25,8 +25,8 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px);
   background-size: 44px 44px;
 }
 
@@ -55,7 +55,7 @@ h6 {
   }
 
   .panel {
-    @apply rounded-3xl border border-white/25 bg-sky-500/35 shadow-glow backdrop-blur-xl;
+    @apply rounded-3xl border border-white/45 bg-white/[0.24] shadow-glow backdrop-blur-xl;
   }
 }
 

@@ -45,18 +45,18 @@ export function ServicesSection() {
                         <h3 className="mt-3 text-4xl uppercase leading-none text-ink">
                           {plan.name}
                         </h3>
-                        <p className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-zinc-300">
+                        <p className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-white/90">
                           {plan.price}
                         </p>
                         {plan.minimumTerm ? (
-                          <p className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-zinc-500">
+                          <p className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/65">
                             {plan.minimumTerm}
                           </p>
                         ) : null}
                       </div>
                     </div>
 
-                    <p className="mt-5 text-base leading-7 text-zinc-300">{plan.idealFor}</p>
+                    <p className="mt-5 text-base leading-7 text-white/90">{plan.idealFor}</p>
 
                     {plan.savings ? (
                       <div className="mt-6 rounded-2xl border border-accent/20 bg-accent/10 px-4 py-3 text-sm font-semibold text-accent">

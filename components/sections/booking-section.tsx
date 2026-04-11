@@ -19,7 +19,7 @@ export function BookingSection() {
           <h3 className="mt-4 text-4xl uppercase leading-none text-ink sm:text-5xl">
             Open Calendly to choose your consultation time.
           </h3>
-          <p className="mt-5 max-w-2xl text-base leading-8 text-zinc-300">
+          <p className="mt-5 max-w-2xl text-base leading-8 text-white/90">
             Calendly opens in a new tab so the booking flow stays reliable on mobile and desktop.
             If you need to log in to manage your calendar, do that directly on Calendly, not inside the website.
           </p>

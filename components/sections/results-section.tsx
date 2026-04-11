@@ -14,8 +14,8 @@ export function ResultsSection() {
         <div className="mt-10 grid gap-5 lg:grid-cols-3">
           {siteContent.testimonials.items.map((testimonial) => (
             <article key={testimonial.name} className="panel p-6 sm:p-8">
-              <p className="text-lg leading-8 text-zinc-100">“{testimonial.quote}”</p>
-              <div className="mt-8 border-t border-white/10 pt-5">
+              <p className="text-lg leading-8 text-white">“{testimonial.quote}”</p>
+              <div className="mt-8 border-t border-white/25 pt-5">
                 <p className="text-xl uppercase text-ink">{testimonial.name}</p>
                 <p className="mt-1 text-sm uppercase tracking-[0.18em] text-accent">
                   {testimonial.result}

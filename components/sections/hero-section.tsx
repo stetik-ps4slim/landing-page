@@ -10,14 +10,14 @@ export function HeroSection() {
       <SiteHeader />
 
       <div className="container-shell grid gap-10 pt-14 sm:pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pt-20">
-        <div className="rounded-[2rem] border border-white/15 bg-white/20 p-5 shadow-glow backdrop-blur sm:p-8 lg:bg-white/15">
+        <div className="rounded-[2rem] border border-white/15 bg-white/28 p-5 shadow-glow backdrop-blur sm:p-8 lg:bg-white/22">
           <p className="mb-4 text-sm font-black uppercase tracking-[0.35em] text-accent">
             {siteContent.brand.eyebrow}
           </p>
           <h1 className="max-w-4xl text-6xl uppercase leading-[0.88] text-ink drop-shadow-[0_8px_24px_rgba(0,0,0,0.35)] sm:text-7xl lg:text-8xl">
             {siteContent.hero.headline}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-zinc-100 sm:text-xl">
+          <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-white sm:text-xl">
             {siteContent.hero.subheading}
           </p>
 
@@ -35,7 +35,7 @@ export function HeroSection() {
 
           <div className="mt-10 grid gap-3 sm:grid-cols-3">
             {siteContent.hero.highlights.map((item) => (
-              <div key={item} className="rounded-3xl border border-white/15 bg-white/10 p-4 backdrop-blur">
+              <div key={item} className="rounded-3xl border border-white/35 bg-white/20 p-4 backdrop-blur">
                 <p className="text-sm font-semibold leading-6 text-white">{item}</p>
               </div>
             ))}
@@ -60,7 +60,7 @@ export function HeroSection() {
               ["Feel", "Stronger"],
               ["Perform", "Higher"]
             ].map(([title, label]) => (
-              <div key={title} className="rounded-2xl border border-white/40 bg-sky-500/25 p-4 text-white shadow-xl backdrop-blur">
+              <div key={title} className="rounded-2xl border border-white/40 bg-sky-500/35 p-4 text-white shadow-xl backdrop-blur">
                 <p className="text-xl font-black uppercase tracking-[0.08em] text-accent">{title}</p>
                 <p className="mt-1 text-xs font-bold uppercase tracking-[0.18em] text-white/85">{label}</p>
               </div>

@@ -11,10 +11,10 @@ export function AboutSection() {
             <p className="text-5xl uppercase leading-none text-ink sm:text-6xl">
               {siteContent.about.coachName}
             </p>
-            <p className="mt-3 text-sm font-semibold uppercase tracking-[0.22em] text-zinc-400">
+            <p className="mt-3 text-sm font-semibold uppercase tracking-[0.22em] text-white/75">
               {siteContent.about.coachRole}
             </p>
-            <p className="mt-4 text-base leading-7 text-zinc-300">
+            <p className="mt-4 text-base leading-7 text-white/90">
               {siteContent.about.coachCardText}
             </p>
             <p className="mt-6 text-sm font-semibold uppercase tracking-[0.18em] text-accent">
@@ -29,7 +29,7 @@ export function AboutSection() {
             title={siteContent.about.title}
             description={siteContent.about.description}
           />
-          <div className="mt-8 grid gap-4 text-base leading-7 text-zinc-300 sm:grid-cols-2">
+          <div className="mt-8 grid gap-4 text-base leading-7 text-white/90 sm:grid-cols-2">
             {siteContent.about.points.map((point) => (
               <div key={point} className="panel p-5">
                 {point}
