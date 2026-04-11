@@ -4,8 +4,13 @@ import { siteContent } from "@/lib/site-content";
 export function SiteHeader() {
   return (
     <header className="container-shell relative z-20 flex flex-col gap-4 pt-5 sm:flex-row sm:items-center sm:justify-between">
-      <a href="#top" className="text-lg font-black uppercase tracking-[0.24em] text-ink drop-shadow-[0_8px_20px_rgba(0,0,0,0.3)]">
-        {siteContent.brand.shortName}
+      <a href="#top" className="flex items-center gap-3 text-lg font-black uppercase tracking-[0.24em] text-ink drop-shadow-[0_8px_20px_rgba(0,0,0,0.3)]">
+        <img
+          src="/upper-notch-logo-badge.png"
+          alt="Upper Notch Coaching logo"
+          className="h-12 w-12 rounded-full border border-white/40 bg-white object-contain p-1 shadow-[0_10px_25px_rgba(0,0,0,0.2)]"
+        />
+        <span>{siteContent.brand.shortName}</span>
       </a>
 
       <div className="flex flex-wrap items-center gap-3 sm:justify-end">

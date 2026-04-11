@@ -46,12 +46,21 @@ export function HeroSection() {
           <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-cta/45 blur-2xl" />
           <div className="absolute -bottom-16 -left-16 h-44 w-44 rounded-full bg-accent/55 blur-2xl" />
 
-          <div className="relative mx-auto flex max-w-[430px] justify-center rounded-[2rem] border border-black/10 bg-white/70 p-4 shadow-2xl backdrop-blur sm:p-6">
-            <img
-              src="/upper-notch-character.png"
-              alt="Upper Notch Coaching character"
-              className="w-full max-w-[360px] drop-shadow-[0_28px_35px_rgba(0,0,0,0.24)]"
-            />
+          <div className="relative mx-auto max-w-[430px] rounded-[2rem] border border-black/10 bg-white/75 p-4 shadow-2xl backdrop-blur sm:p-6">
+            <div className="mx-auto mb-4 flex max-w-[280px] justify-center rounded-[1.5rem] border border-black/10 bg-white/90 px-5 py-3 shadow-[0_18px_35px_rgba(15,23,42,0.16)]">
+              <img
+                src="/upper-notch-logo-badge.png"
+                alt="Upper Notch Coaching logo"
+                className="h-auto w-full object-contain"
+              />
+            </div>
+            <div className="flex justify-center rounded-[1.5rem] bg-sky-400/15 p-3">
+              <img
+                src="/upper-notch-character.png"
+                alt="Upper Notch Coaching character"
+                className="w-full max-w-[320px] drop-shadow-[0_28px_35px_rgba(0,0,0,0.24)]"
+              />
+            </div>
           </div>
 
           <div className="relative mt-5 grid gap-3 sm:grid-cols-3">
