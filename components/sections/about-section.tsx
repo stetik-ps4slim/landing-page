@@ -8,13 +8,13 @@ export function AboutSection() {
         <div className="panel p-6 sm:p-8">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">The Coach</p>
           <div className="mt-6">
-            <p className="text-5xl uppercase leading-none text-ink sm:text-6xl">
+            <p className="text-5xl uppercase leading-none text-slate-950 sm:text-6xl">
               {siteContent.about.coachName}
             </p>
-            <p className="mt-3 text-sm font-semibold uppercase tracking-[0.22em] text-white/75">
+            <p className="mt-3 text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">
               {siteContent.about.coachRole}
             </p>
-            <p className="mt-4 text-base leading-7 text-white/90">
+            <p className="mt-4 text-base leading-7 text-slate-700">
               {siteContent.about.coachCardText}
             </p>
             <p className="mt-6 text-sm font-semibold uppercase tracking-[0.18em] text-accent">
@@ -29,7 +29,7 @@ export function AboutSection() {
             title={siteContent.about.title}
             description={siteContent.about.description}
           />
-          <div className="mt-8 grid gap-4 text-base leading-7 text-white/90 sm:grid-cols-2">
+          <div className="mt-8 grid gap-4 text-base leading-7 text-slate-700 sm:grid-cols-2">
             {siteContent.about.points.map((point) => (
               <div key={point} className="panel p-5">
                 {point}

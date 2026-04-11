@@ -67,12 +67,12 @@ export function LeadFormSection() {
             description={siteContent.leadForm.description}
           />
           <div className="mt-8 panel p-6">
-            <p className="text-sm leading-7 text-white/90">{siteContent.leadForm.note}</p>
-            <div className="mt-6 h-px bg-white/10" />
+            <p className="text-sm leading-7 text-slate-700">{siteContent.leadForm.note}</p>
+            <div className="mt-6 h-px bg-sky-200" />
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-accent">
               Best Fit Clients
             </p>
-            <ul className="mt-4 space-y-3 text-base leading-7 text-white/90">
+            <ul className="mt-4 space-y-3 text-base leading-7 text-slate-700">
               {siteContent.leadForm.fitPoints.map((point) => (
                 <li key={point}>{point}</li>
               ))}
@@ -80,17 +80,17 @@ export function LeadFormSection() {
           </div>
         </div>
 
-        <div className="panel border-accent/25 p-6 shadow-glow sm:p-8">
+        <div className="panel border-accent/35 p-6 shadow-[0_24px_70px_rgba(3,55,104,0.18)] sm:p-8">
           <form className="space-y-5" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="name" className="mb-2 block text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
+              <label htmlFor="name" className="mb-2 block text-xs font-semibold uppercase tracking-[0.25em] text-slate-700">
                 Full Name
               </label>
               <input
                 id="name"
                 value={form.name}
                 onChange={(event) => setForm((current) => ({ ...current, name: event.target.value }))}
-                className="w-full rounded-2xl border border-white/25 bg-white/18 px-4 py-3 text-base text-ink outline-none transition placeholder:text-white/65 focus:border-accent"
+                className="w-full rounded-2xl border border-sky-200 bg-sky-50 px-4 py-3 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-accent focus:bg-white"
                 placeholder="Your name"
                 autoComplete="name"
                 required
@@ -98,7 +98,7 @@ export function LeadFormSection() {
             </div>
 
             <div>
-              <label htmlFor="phone" className="mb-2 block text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
+              <label htmlFor="phone" className="mb-2 block text-xs font-semibold uppercase tracking-[0.25em] text-slate-700">
                 Phone
               </label>
               <input
@@ -106,7 +106,7 @@ export function LeadFormSection() {
                 type="tel"
                 value={form.phone}
                 onChange={(event) => setForm((current) => ({ ...current, phone: event.target.value }))}
-                className="w-full rounded-2xl border border-white/25 bg-white/18 px-4 py-3 text-base text-ink outline-none transition placeholder:text-white/65 focus:border-accent"
+                className="w-full rounded-2xl border border-sky-200 bg-sky-50 px-4 py-3 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-accent focus:bg-white"
                 placeholder="Best contact number"
                 autoComplete="tel"
                 required
@@ -114,7 +114,7 @@ export function LeadFormSection() {
             </div>
 
             <div>
-              <label htmlFor="email" className="mb-2 block text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
+              <label htmlFor="email" className="mb-2 block text-xs font-semibold uppercase tracking-[0.25em] text-slate-700">
                 Email
               </label>
               <input
@@ -122,7 +122,7 @@ export function LeadFormSection() {
                 type="email"
                 value={form.email}
                 onChange={(event) => setForm((current) => ({ ...current, email: event.target.value }))}
-                className="w-full rounded-2xl border border-white/25 bg-white/18 px-4 py-3 text-base text-ink outline-none transition placeholder:text-white/65 focus:border-accent"
+                className="w-full rounded-2xl border border-sky-200 bg-sky-50 px-4 py-3 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-accent focus:bg-white"
                 placeholder="you@example.com"
                 autoComplete="email"
                 required
@@ -130,14 +130,14 @@ export function LeadFormSection() {
             </div>
 
             <div>
-              <label htmlFor="goal" className="mb-2 block text-xs font-semibold uppercase tracking-[0.25em] text-white/90">
+              <label htmlFor="goal" className="mb-2 block text-xs font-semibold uppercase tracking-[0.25em] text-slate-700">
                 Main Goal
               </label>
               <textarea
                 id="goal"
                 value={form.goal}
                 onChange={(event) => setForm((current) => ({ ...current, goal: event.target.value }))}
-                className="min-h-32 w-full rounded-2xl border border-white/25 bg-white/18 px-4 py-3 text-base text-ink outline-none transition placeholder:text-white/65 focus:border-accent"
+                className="min-h-32 w-full rounded-2xl border border-sky-200 bg-sky-50 px-4 py-3 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-accent focus:bg-white"
                 placeholder="Tell us what you want to achieve over the next 3-6 months."
                 required
               />
