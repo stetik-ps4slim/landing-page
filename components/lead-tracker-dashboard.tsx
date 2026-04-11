@@ -194,22 +194,21 @@ export function LeadTrackerDashboard({
   }
 
   return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(120,119,198,0.18),transparent_25%),radial-gradient(circle_at_top_right,rgba(67,168,139,0.16),transparent_28%),linear-gradient(180deg,#07111a_0%,#0b1621_38%,#061017_100%)] text-slate-100">
+    <main className="min-h-screen text-white">
       <div className="container-shell max-w-7xl py-10 sm:py-12">
-        <section className="relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-white/5 p-7 shadow-glow backdrop-blur sm:p-10">
-          <div className="absolute inset-0 bg-grid bg-[size:32px_32px] opacity-20" />
+        <section className="relative overflow-hidden rounded-[2.25rem] border border-white/30 bg-slate-700/60 p-7 shadow-[0_30px_90px_rgba(34,55,90,0.35)] backdrop-blur-2xl sm:p-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_10%,rgba(255,69,174,0.24),transparent_26%),linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:auto,28px_28px,28px_28px] opacity-90" />
           <div className="relative grid gap-8 lg:grid-cols-[1.3fr_0.7fr]">
             <div className="space-y-5">
-              <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-emerald-100">
-                PT Lead Tracker
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-slate-800/70 px-4 py-1.5 text-xs font-black uppercase tracking-[0.3em] text-yellow-300">
+                Upper Notch
               </div>
               <div className="space-y-4">
                 <h1 className="max-w-4xl text-5xl font-semibold leading-tight text-white sm:text-6xl">
-                  Keep every enquiry moving from first message to signed client.
+                  Upper Notch Lead Tracker
                 </h1>
-                <p className="max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">
-                  Built for a personal training business: see new leads, book consults,
-                  stay on top of follow-ups, and keep sales notes in one place.
+                <p className="max-w-3xl text-xl font-black uppercase tracking-[0.22em] text-yellow-300 sm:text-2xl">
+                  get to work boy
                 </p>
               </div>
               <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
@@ -220,16 +219,16 @@ export function LeadTrackerDashboard({
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-slate-950/60 p-6 sm:p-7">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-400">
+            <div className="rounded-[2rem] border border-white/30 bg-slate-800/70 p-6 sm:p-7">
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-slate-200">
                 Workflow
               </p>
               <div className="mt-4 space-y-3">
                 {leadStatuses.map((status, index) => (
-                  <div key={status} className="flex items-center justify-between gap-4 rounded-2xl border border-white/8 bg-white/5 px-5 py-4">
+                  <div key={status} className="flex items-center justify-between gap-4 rounded-2xl border border-white/20 bg-white/5 px-5 py-4">
                     <div>
                       <p className="text-base font-semibold text-white">{formatStatusLabel(status)}</p>
-                      <p className="text-sm text-slate-400">Stage {index + 1}</p>
+                      <p className="text-sm text-slate-200">Stage {index + 1}</p>
                     </div>
                     <span className={`rounded-full border px-4 py-1.5 text-sm font-semibold ${statusTone[status]}`}>
                       {leads.filter((lead) => lead.status === status).length}
@@ -247,18 +246,18 @@ export function LeadTrackerDashboard({
         </section>
 
         <section className="mt-10 grid gap-8 2xl:grid-cols-[1.08fr_0.92fr]">
-          <form onSubmit={createLead} className="rounded-[2.25rem] border border-white/10 bg-slate-950/55 p-7 backdrop-blur sm:p-8 2xl:sticky 2xl:top-8">
+          <form onSubmit={createLead} className="rounded-[2.25rem] border border-white/30 bg-slate-700/65 p-7 backdrop-blur sm:p-8 2xl:sticky 2xl:top-8">
             <div className="flex items-end justify-between gap-3">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200/80">
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-yellow-300">
                   Add Lead
                 </p>
                 <h2 className="mt-2 text-3xl font-semibold text-white">New enquiry capture</h2>
-                <p className="mt-3 max-w-2xl text-base leading-7 text-slate-400">
+                <p className="mt-3 max-w-2xl text-base leading-7 text-slate-200">
                   Capture the lead once, then manage calls, consults, and follow-ups from the board.
                 </p>
               </div>
-              <span className="rounded-full border border-white/10 px-4 py-1.5 text-sm text-slate-400">
+              <span className="rounded-full border border-white/10 px-4 py-1.5 text-sm text-slate-200">
                 Quick intake
               </span>
             </div>
@@ -320,19 +319,19 @@ export function LeadTrackerDashboard({
 
             {error ? <p className="mt-5 text-base text-rose-300">{error}</p> : null}
 
-            <button type="submit" disabled={isPending} className="mt-7 inline-flex items-center justify-center rounded-full bg-cyan-300 px-6 py-3.5 text-base font-semibold text-slate-950 transition hover:bg-cyan-200 disabled:cursor-not-allowed disabled:opacity-60">
+            <button type="submit" disabled={isPending} className="mt-7 inline-flex items-center justify-center rounded-full bg-pink-500 px-6 py-3.5 text-base font-black uppercase tracking-[0.16em] text-white shadow-[0_18px_40px_rgba(236,72,153,0.35)] transition hover:bg-pink-400 disabled:cursor-not-allowed disabled:opacity-60">
               {isPending ? "Saving..." : "Add lead"}
             </button>
           </form>
 
-          <section className="rounded-[2.25rem] border border-white/10 bg-slate-950/55 p-7 backdrop-blur sm:p-8">
+          <section className="rounded-[2.25rem] border border-white/30 bg-slate-700/65 p-7 backdrop-blur sm:p-8">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200/80">
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-yellow-300">
                   Lead Board
                 </p>
                 <h2 className="mt-2 text-3xl font-semibold text-white">Your pipeline at a glance</h2>
-                <p className="mt-3 text-base leading-7 text-slate-400">
+                <p className="mt-3 text-base leading-7 text-slate-200">
                   Ordered by nearest follow-up date first, then by lead priority.
                 </p>
               </div>
@@ -365,7 +364,7 @@ export function LeadTrackerDashboard({
             <div className="mt-7 space-y-5">
               {filteredLeads.length ? (
                 filteredLeads.map((lead) => (
-                  <article key={lead.id} className="rounded-[1.8rem] border border-white/10 bg-white/[0.045] p-6 sm:p-7">
+                  <article key={lead.id} className="rounded-[1.8rem] border border-white/10 bg-slate-800/70 p-6 sm:p-7">
                     <div className="flex flex-col gap-6 2xl:flex-row 2xl:items-start 2xl:justify-between">
                       <div className="min-w-0 flex-1 space-y-4">
                         <div className="flex flex-wrap items-center gap-3">
@@ -380,7 +379,7 @@ export function LeadTrackerDashboard({
                         <p className="max-w-3xl break-words text-base leading-8 text-slate-300 sm:text-lg">
                           {lead.goal}
                         </p>
-                        <div className="flex flex-wrap gap-x-5 gap-y-2 text-base text-slate-400">
+                        <div className="flex flex-wrap gap-x-5 gap-y-2 text-base text-slate-200">
                           <span>{lead.phone}</span>
                           <span className="break-all">{lead.email}</span>
                           <span>{formatSourceLabel(lead.source)}</span>
@@ -388,13 +387,13 @@ export function LeadTrackerDashboard({
                           {lead.budget ? <span>{lead.budget}</span> : null}
                         </div>
                         {lead.notes ? (
-                          <p className="rounded-2xl border border-white/8 bg-slate-900/70 px-5 py-4 text-base leading-8 text-slate-300">
+                          <p className="rounded-2xl border border-white/20 bg-slate-950/50 px-5 py-4 text-base leading-8 text-slate-300">
                             {lead.notes}
                           </p>
                         ) : null}
                         <div className="grid gap-5 2xl:grid-cols-[1fr_1.15fr]">
-                          <div className="rounded-[1.7rem] border border-white/8 bg-slate-900/70 px-6 py-5 text-base text-slate-300">
-                            <p className="text-sm uppercase tracking-[0.18em] text-slate-500">
+                          <div className="rounded-[1.7rem] border border-white/20 bg-slate-950/50 px-6 py-5 text-base text-slate-300">
+                            <p className="text-sm uppercase tracking-[0.18em] text-yellow-300">
                               Follow-Up Calls
                             </p>
                             <p className="mt-4 text-4xl font-semibold text-white">
@@ -408,13 +407,13 @@ export function LeadTrackerDashboard({
                                   last_contacted_at: new Date().toISOString()
                                 })
                               }
-                              className="mt-4 rounded-full border border-cyan-300/30 bg-cyan-300/10 px-5 py-3 text-base font-semibold text-cyan-100 transition hover:bg-cyan-300/20"
+                              className="mt-4 rounded-full border border-pink-300/30 bg-pink-500 px-5 py-3 text-base font-semibold text-white transition hover:bg-pink-400"
                             >
                               Log follow-up call
                             </button>
                           </div>
-                          <div className="rounded-[1.7rem] border border-white/8 bg-slate-900/70 px-6 py-5 text-base text-slate-300">
-                            <p className="text-sm uppercase tracking-[0.18em] text-slate-500">
+                          <div className="rounded-[1.7rem] border border-white/20 bg-slate-950/50 px-6 py-5 text-base text-slate-300">
+                            <p className="text-sm uppercase tracking-[0.18em] text-yellow-300">
                               Consultation
                             </p>
                             <p className="mt-4 text-4xl font-semibold leading-tight text-white">
@@ -428,7 +427,7 @@ export function LeadTrackerDashboard({
                                     lead.consultation_sessions_completed + 1
                                 })
                               }
-                              className="mt-4 rounded-full border border-violet-300/30 bg-violet-300/10 px-5 py-3 text-base font-semibold text-violet-100 transition hover:bg-violet-300/20"
+                              className="mt-4 rounded-full border border-pink-300/30 bg-pink-500 px-5 py-3 text-base font-semibold text-white transition hover:bg-pink-400"
                             >
                               Add consultation session
                             </button>
@@ -438,7 +437,7 @@ export function LeadTrackerDashboard({
 
                       <div className="grid gap-4 sm:grid-cols-2 2xl:w-[360px] 2xl:grid-cols-1">
                         <label className="text-base text-slate-300">
-                          <span className="mb-2 block text-sm uppercase tracking-[0.18em] text-slate-500">
+                          <span className="mb-2 block text-sm uppercase tracking-[0.18em] text-yellow-300">
                             Stage
                           </span>
                           <select
@@ -463,18 +462,18 @@ export function LeadTrackerDashboard({
                               last_contacted_at: new Date().toISOString()
                             })
                           }
-                          className="rounded-2xl border border-cyan-300/30 bg-cyan-300/10 px-5 py-4 text-base font-semibold text-cyan-100 transition hover:bg-cyan-300/20"
+                          className="rounded-2xl border border-pink-300/30 bg-pink-500 px-5 py-4 text-base font-semibold text-white transition hover:bg-pink-400"
                         >
                           Mark contacted now
                         </button>
 
-                        <div className="rounded-2xl border border-white/8 bg-slate-900/70 px-5 py-4 text-base text-slate-300">
-                          <p className="text-sm uppercase tracking-[0.18em] text-slate-500">Last contacted</p>
+                        <div className="rounded-2xl border border-white/20 bg-slate-950/50 px-5 py-4 text-base text-slate-300">
+                          <p className="text-sm uppercase tracking-[0.18em] text-yellow-300">Last contacted</p>
                           <p className="mt-2 break-words leading-7">{formatDate(lead.last_contacted_at)}</p>
                         </div>
 
-                        <div className="rounded-2xl border border-white/8 bg-slate-900/70 px-5 py-4 text-base text-slate-300">
-                          <p className="text-sm uppercase tracking-[0.18em] text-slate-500">Next follow-up</p>
+                        <div className="rounded-2xl border border-white/20 bg-slate-950/50 px-5 py-4 text-base text-slate-300">
+                          <p className="text-sm uppercase tracking-[0.18em] text-yellow-300">Next follow-up</p>
                           <p className="mt-2 break-words leading-7">{formatDate(lead.next_follow_up_at)}</p>
                         </div>
                       </div>
@@ -482,7 +481,7 @@ export function LeadTrackerDashboard({
                   </article>
                 ))
               ) : (
-                <div className="rounded-[1.8rem] border border-dashed border-white/15 bg-white/[0.03] px-8 py-12 text-center text-lg text-slate-400">
+                <div className="rounded-[1.8rem] border border-dashed border-white/15 bg-white/[0.03] px-8 py-12 text-center text-lg text-slate-200">
                   No leads match this filter yet.
                 </div>
               )}
@@ -505,10 +504,10 @@ function StatCard({
   hint: string;
 }) {
   return (
-    <div className="rounded-[1.6rem] border border-white/10 bg-slate-950/60 p-5">
-      <p className="text-sm uppercase tracking-[0.2em] text-slate-500">{label}</p>
+    <div className="rounded-[1.6rem] border border-white/30 bg-slate-800/70 p-5">
+      <p className="text-sm uppercase tracking-[0.2em] text-yellow-300">{label}</p>
       <p className="mt-3 text-4xl font-semibold text-white">{value}</p>
-      <p className="mt-2 text-base text-slate-400">{hint}</p>
+      <p className="mt-2 text-base text-slate-200">{hint}</p>
     </div>
   );
 }
@@ -524,7 +523,7 @@ function Field({
 }) {
   return (
     <label className={className}>
-      <span className="mb-2 block text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">
+      <span className="mb-2 block text-sm font-semibold uppercase tracking-[0.18em] text-yellow-300">
         {label}
       </span>
       {children}
@@ -544,4 +543,4 @@ function formatDate(value: string | null) {
 }
 
 const inputClassName =
-  "w-full rounded-2xl border border-white/10 bg-slate-900/80 px-5 py-4 text-base text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-300/50 focus:ring-2 focus:ring-cyan-300/15";
+  "w-full rounded-2xl border border-white/35 bg-white/90 px-5 py-4 text-base text-slate-950 outline-none transition placeholder:text-slate-500 focus:border-pink-400/80 focus:ring-2 focus:ring-pink-400/25";
