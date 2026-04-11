@@ -9,18 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        canvas: "#090909",
-        panel: "#121212",
-        line: "#252525",
-        accent: "#d2a86c",
-        ink: "#f6f3ee",
-        muted: "#a3a3a3"
+        canvas: "#07111f",
+        panel: "#07101d",
+        line: "#183b69",
+        accent: "#ffd23f",
+        ink: "#ffffff",
+        muted: "#c8d8f2",
+        electric: "#17a8ff",
+        cta: "#ff3fa4"
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(210, 168, 108, 0.18), 0 20px 60px rgba(0, 0, 0, 0.35)"
+        glow: "0 0 0 1px rgba(255, 210, 63, 0.24), 0 24px 70px rgba(7, 17, 31, 0.35)",
+        pop: "0 18px 45px rgba(255, 63, 164, 0.35)"
       },
       backgroundImage: {
-        grid: "linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)"
+        grid: "linear-gradient(rgba(255,255,255,0.11) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.11) 1px, transparent 1px)"
       }
     }
   },
