@@ -83,7 +83,7 @@ export async function POST(request: Request) {
     }
 
     return NextResponse.json({
-      message: "Lead saved successfully.",
+      message: "Success. Your coaching application has been sent.",
       lead: data
     });
   } catch (error) {

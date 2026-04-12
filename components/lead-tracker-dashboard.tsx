@@ -102,6 +102,14 @@ export function LeadTrackerDashboard({
   }, [leads, query, sourceFilter, statusFilter]);
 
   const stats = getLeadStats(filteredLeads);
+  const websiteFollowUpLeads = useMemo(() => {
+    return leads
+      .filter((lead) => lead.source === "website" && lead.status === "new")
+      .sort(
+        (left, right) =>
+          new Date(right.created_at).getTime() - new Date(left.created_at).getTime()
+      );
+  }, [leads]);
 
   async function createLead(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -242,6 +250,81 @@ export function LeadTrackerDashboard({
                 </p>
               ) : null}
             </div>
+          </div>
+        </section>
+
+        <section className="mt-10 rounded-[2.25rem] border border-yellow-300/30 bg-slate-800/75 p-7 shadow-[0_24px_70px_rgba(3,55,104,0.22)] backdrop-blur sm:p-8">
+          <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-yellow-300">
+                Landing Page Leads
+              </p>
+              <h2 className="mt-2 text-3xl font-semibold text-white">Website enquiries needing follow-up</h2>
+              <p className="mt-3 max-w-3xl text-base leading-7 text-slate-200">
+                When someone applies on the landing page, they save here as a new website lead. Contact them, then move them into the pipeline below.
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => {
+                setSourceFilter("website");
+                setStatusFilter("new");
+              }}
+              className="inline-flex items-center justify-center rounded-full border border-yellow-300 bg-yellow-300 px-5 py-3 text-sm font-black uppercase tracking-[0.16em] text-slate-950 transition hover:bg-yellow-200"
+            >
+              Show website leads
+            </button>
+          </div>
+
+          <div className="mt-7 grid gap-4 lg:grid-cols-3">
+            {websiteFollowUpLeads.length ? (
+              websiteFollowUpLeads.slice(0, 6).map((lead) => (
+                <article key={lead.id} className="rounded-[1.6rem] border border-white/20 bg-slate-950/45 p-5">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <h3 className="text-2xl font-semibold text-white">{lead.name}</h3>
+                      <p className="mt-1 text-sm uppercase tracking-[0.18em] text-yellow-300">
+                        New website enquiry
+                      </p>
+                    </div>
+                    <span className="rounded-full border border-sky-300/30 bg-sky-300/10 px-3 py-1 text-xs font-semibold text-sky-100">
+                      New
+                    </span>
+                  </div>
+                  <p className="mt-4 line-clamp-3 text-base leading-7 text-slate-200">{lead.goal}</p>
+                  <div className="mt-4 space-y-1 text-sm text-slate-300">
+                    <p>{lead.phone}</p>
+                    <p className="break-all">{lead.email}</p>
+                  </div>
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    <button
+                      type="button"
+                      onClick={() =>
+                        updateLead(lead.id, {
+                          status: "contacted",
+                          follow_up_calls: lead.follow_up_calls + 1,
+                          last_contacted_at: new Date().toISOString()
+                        })
+                      }
+                      className="rounded-full bg-pink-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-pink-400"
+                    >
+                      Mark contacted
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => updateLead(lead.id, { status: "consult-booked" })}
+                      className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition hover:border-yellow-300 hover:text-yellow-300"
+                    >
+                      Consult booked
+                    </button>
+                  </div>
+                </article>
+              ))
+            ) : (
+              <div className="rounded-[1.6rem] border border-dashed border-white/20 bg-white/[0.04] p-6 text-base leading-7 text-slate-200 lg:col-span-3">
+                No new website leads need follow-up right now. When someone applies from the landing page, they will appear here first.
+              </div>
+            )}
           </div>
         </section>
 
