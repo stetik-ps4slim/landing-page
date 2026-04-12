@@ -40,7 +40,7 @@ export const siteContent = {
       "Every option is designed to create momentum. The difference is the speed of progress, the level of support, and how closely you want your training held to a higher standard.",
     categories: [
       {
-        name: "In-Person Coaching",
+        name: "Hybrid Coaching",
         plans: [
           {
             name: "Foundation",
@@ -69,7 +69,7 @@ export const siteContent = {
             price: "From $289/week",
             minimumTerm: "12-week minimum",
             idealFor:
-              "For clients who want the highest level of in-person coaching, tighter accountability, and the fastest path to results.",
+              "For clients who want the highest level of hybrid coaching, tighter accountability, and the fastest path to results.",
             savings: "Save $632 with upfront payment",
             ctaLabel: "Book Private Consultation",
             badge: "",
@@ -78,14 +78,14 @@ export const siteContent = {
         ]
       },
       {
-        name: "Blended Coaching (In-Person + Online)",
+        name: "Hybrid Coaching Flex",
         plans: [
           {
             name: "Hybrid Transformation",
             price: "From $149/week",
             minimumTerm: "12-week minimum",
             idealFor:
-              "For clients who want the flexibility of online coaching with the added edge of in-person support and accountability.",
+              "For clients who want a flexible hybrid structure with online coaching plus in-person support and accountability.",
             savings: "Save $252 with upfront payment",
             ctaLabel: "Book Private Consultation",
             badge: "",
@@ -98,7 +98,7 @@ export const siteContent = {
         plans: [
           {
             name: "Online Coaching",
-            price: "From $59/week",
+            price: "From $89/week",
             minimumTerm: "8-week minimum",
             idealFor:
               "For clients who want a structured plan, weekly accountability, and expert direction while training on their own schedule.",
