@@ -9,6 +9,7 @@ type FormState = {
   name: string;
   phone: string;
   email: string;
+  bestTimeToContact: string;
   goal: string;
 };
 
@@ -16,6 +17,7 @@ const initialFormState: FormState = {
   name: "",
   phone: "",
   email: "",
+  bestTimeToContact: "",
   goal: ""
 };
 
@@ -37,7 +39,10 @@ export function LeadFormSection() {
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(form)
+        body: JSON.stringify({
+          ...form,
+          notes: `Best time to contact: ${form.bestTimeToContact}`
+        })
       });
 
       const data = (await response.json()) as { error?: string; message?: string };
@@ -125,6 +130,21 @@ export function LeadFormSection() {
                 className="w-full rounded-2xl border border-sky-200 bg-sky-50 px-4 py-3 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-accent focus:bg-white"
                 placeholder="you@example.com"
                 autoComplete="email"
+                required
+              />
+            </div>
+
+            <div>
+              <label htmlFor="best-time" className="mb-2 block text-xs font-semibold uppercase tracking-[0.25em] text-slate-700">
+                Best Time To Contact
+              </label>
+              <input
+                id="best-time"
+                value={form.bestTimeToContact}
+                onChange={(event) => setForm((current) => ({ ...current, bestTimeToContact: event.target.value }))}
+                className="w-full rounded-2xl border border-sky-200 bg-sky-50 px-4 py-3 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-accent focus:bg-white"
+                placeholder="Example: Weekdays after 5pm"
+                autoComplete="off"
                 required
               />
             </div>

@@ -296,6 +296,11 @@ export function LeadTrackerDashboard({
                     <p>{lead.phone}</p>
                     <p className="break-all">{lead.email}</p>
                   </div>
+                  {lead.notes ? (
+                    <p className="mt-4 rounded-2xl border border-yellow-300/20 bg-yellow-300/10 px-4 py-3 text-sm font-semibold leading-6 text-yellow-100">
+                      {lead.notes}
+                    </p>
+                  ) : null}
                   <div className="mt-5 flex flex-wrap gap-3">
                     <button
                       type="button"
