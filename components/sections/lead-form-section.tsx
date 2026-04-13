@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { siteContent } from "@/lib/site-content";
@@ -22,6 +23,7 @@ const initialFormState: FormState = {
 };
 
 export function LeadFormSection() {
+  const router = useRouter();
   const [form, setForm] = useState<FormState>(initialFormState);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -54,6 +56,7 @@ export function LeadFormSection() {
 
       setSuccessMessage(data.message ?? "Your consultation request has been submitted.");
       setForm(initialFormState);
+      router.push("/thank-you");
     } catch (error) {
       console.error(error);
       setErrorMessage("We could not submit the form right now. Please try again.");
@@ -178,6 +181,9 @@ export function LeadFormSection() {
             <Button type="submit" className="w-full sm:w-auto" disabled={isSubmitting}>
               {isSubmitting ? "Submitting..." : siteContent.brand.applicationLabel}
             </Button>
+            <p className="text-sm leading-6 text-slate-500">
+              Your details are used only to contact you about Upper Notch Coaching and manage your enquiry.
+            </p>
           </form>
         </div>
       </div>

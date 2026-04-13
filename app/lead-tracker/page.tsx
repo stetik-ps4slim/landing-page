@@ -1,3 +1,5 @@
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 import { LeadTrackerDashboard } from "@/components/lead-tracker-dashboard";
 import { hasSupabaseConfig, sampleLeads, type Lead } from "@/lib/leads";
 import { createSupabaseAdminClient } from "@/lib/supabase";
@@ -28,6 +30,13 @@ async function getInitialLeads(): Promise<{ leads: Lead[]; isFallback: boolean }
 }
 
 export default async function LeadTrackerPage() {
+  const cookieStore = await cookies();
+  const isUnlocked = cookieStore.get("upper-notch-lead-tracker")?.value === "unlocked";
+
+  if (!isUnlocked) {
+    redirect("/lead-tracker/login");
+  }
+
   const { leads, isFallback } = await getInitialLeads();
 
   return <LeadTrackerDashboard initialLeads={leads} isFallback={isFallback} />;

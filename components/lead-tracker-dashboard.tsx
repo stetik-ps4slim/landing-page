@@ -103,6 +103,22 @@ export function LeadTrackerDashboard({
   }, [leads, query, sourceFilter, statusFilter]);
 
   const stats = getLeadStats(filteredLeads);
+  const dueFollowUpLeads = useMemo(() => {
+    return leads
+      .filter((lead) => {
+        if (!lead.next_follow_up_at) {
+          return false;
+        }
+
+        return new Date(lead.next_follow_up_at).getTime() <= Date.now();
+      })
+      .sort(
+        (left, right) =>
+          new Date(left.next_follow_up_at ?? 0).getTime() -
+          new Date(right.next_follow_up_at ?? 0).getTime()
+      );
+  }, [leads]);
+
   const websiteFollowUpLeads = useMemo(() => {
     return leads
       .filter((lead) => lead.source === "website" && lead.status === "new")
@@ -226,6 +242,12 @@ export function LeadTrackerDashboard({
                 <StatCard label="Clients Won" value={stats.won} hint="Converted leads" />
                 <StatCard label="Due Follow-Ups" value={stats.followUps} hint="Needs action now" />
               </div>
+              <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+                <AdminLink href="/" label="Landing page" />
+                <AdminLink href="https://calendly.com/jazz04092005" label="Calendly" />
+                <AdminLink href="https://consultation-needs-app.vercel.app/#screening" label="Onboarding form" />
+                <AdminLink href="https://supabase.com/dashboard" label="Supabase" />
+              </div>
             </div>
 
             <div className="rounded-[2rem] border border-white/30 bg-slate-800/70 p-6 sm:p-7">
@@ -251,6 +273,61 @@ export function LeadTrackerDashboard({
                 </p>
               ) : null}
             </div>
+          </div>
+        </section>
+
+        <section className="mt-10 rounded-[2.25rem] border border-pink-300/30 bg-slate-800/75 p-7 shadow-[0_24px_70px_rgba(3,55,104,0.22)] backdrop-blur sm:p-8">
+          <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.24em] text-pink-200">Due Follow-Ups</p>
+              <h2 className="mt-2 text-3xl font-semibold text-white">Leads that need action now</h2>
+              <p className="mt-3 max-w-3xl text-base leading-7 text-slate-200">
+                These leads have a follow-up time set for now or earlier. Clear this list first so no enquiry goes cold.
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => {
+                setStatusFilter("all");
+                setSourceFilter("all");
+              }}
+              className="inline-flex items-center justify-center rounded-full border border-pink-300 bg-pink-500 px-5 py-3 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:bg-pink-400"
+            >
+              Show full board
+            </button>
+          </div>
+
+          <div className="mt-7 grid gap-4 lg:grid-cols-3">
+            {dueFollowUpLeads.length ? (
+              dueFollowUpLeads.slice(0, 6).map((lead) => (
+                <article key={lead.id} className="rounded-[1.6rem] border border-white/20 bg-slate-950/45 p-5">
+                  <h3 className="text-2xl font-semibold text-white">{lead.name}</h3>
+                  <p className="mt-2 text-sm uppercase tracking-[0.18em] text-pink-200">Due {formatDate(lead.next_follow_up_at)}</p>
+                  <p className="mt-4 line-clamp-3 text-base leading-7 text-slate-200">{lead.goal}</p>
+                  <div className="mt-4 space-y-1 text-sm text-slate-300">
+                    <p>{lead.phone}</p>
+                    <p className="break-all">{lead.email}</p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      updateLead(lead.id, {
+                        follow_up_calls: lead.follow_up_calls + 1,
+                        last_contacted_at: new Date().toISOString(),
+                        next_follow_up_at: null
+                      })
+                    }
+                    className="mt-5 rounded-full bg-pink-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-pink-400"
+                  >
+                    Mark followed up
+                  </button>
+                </article>
+              ))
+            ) : (
+              <div className="rounded-[1.6rem] border border-dashed border-white/20 bg-white/[0.04] p-6 text-base leading-7 text-slate-200 lg:col-span-3">
+                No overdue follow-ups right now.
+              </div>
+            )}
           </div>
         </section>
 
@@ -618,6 +695,19 @@ export function LeadTrackerDashboard({
 
       </div>
     </main>
+  );
+}
+
+function AdminLink({ href, label }: { href: string; label: string }) {
+  return (
+    <a
+      href={href}
+      target={href.startsWith("http") ? "_blank" : undefined}
+      rel={href.startsWith("http") ? "noreferrer" : undefined}
+      className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-center text-sm font-semibold uppercase tracking-[0.14em] text-white transition hover:border-yellow-300 hover:text-yellow-300"
+    >
+      {label}
+    </a>
   );
 }
 
