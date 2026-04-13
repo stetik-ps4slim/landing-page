@@ -324,7 +324,7 @@ export function LeadTrackerDashboard({
                       Consult booked
                     </button>
                     <a
-                      href="/onboarding"
+                      href="https://consultation-needs-app.vercel.app/#screening"
                       target="_blank"
                       rel="noreferrer"
                       className="rounded-full border border-cyan-300/30 px-4 py-2 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200 hover:text-white"
@@ -573,7 +573,7 @@ export function LeadTrackerDashboard({
                         </button>
 
                         <a
-                          href="/onboarding"
+                          href="https://consultation-needs-app.vercel.app/#screening"
                           target="_blank"
                           rel="noreferrer"
                           className="rounded-2xl border border-yellow-300/30 bg-yellow-300/10 px-5 py-4 text-base font-semibold text-yellow-100 transition hover:border-yellow-200 hover:bg-yellow-300/20"
@@ -596,7 +596,7 @@ export function LeadTrackerDashboard({
                             <p className="text-sm uppercase tracking-[0.18em] text-cyan-200">Onboarding checklist</p>
                             <ul className="mt-3 space-y-2 text-sm leading-6 text-cyan-50/90">
                               <li>Confirm payment and package.</li>
-                              <li>Send /onboarding form.</li>
+                              <li>Send the onboarding form.</li>
                               <li>Review health screening and injuries.</li>
                               <li>Confirm training days and first check-in.</li>
                               <li>Build program and nutrition starting point.</li>

@@ -1,12 +1,5 @@
-import type { Metadata } from "next";
-import { ConsultationIntakeApp } from "@/components/consultation-intake-app";
-
-export const metadata: Metadata = {
-  title: "Upper Notch Coaching Onboarding",
-  description:
-    "Client onboarding form for goals, schedule, training background, health screening, and coaching sign-off."
-};
+import { redirect } from "next/navigation";
 
 export default function OnboardingPage() {
-  return <ConsultationIntakeApp />;
+  redirect("https://consultation-needs-app.vercel.app/#screening");
 }
