@@ -49,7 +49,7 @@ export const siteContent = {
             idealFor:
               "For building consistency, confidence, and a strong baseline with expert guidance each week.",
             savings: "Save $172 with upfront payment",
-            ctaLabel: "Book Private Consultation",
+            ctaLabel: "Book Consultation",
             badge: "",
             featured: false
           },
@@ -60,7 +60,7 @@ export const siteContent = {
             idealFor:
               "For clients ready to make noticeable physique and performance changes with more support, more accountability, and more momentum.",
             savings: "Save $432 with upfront payment",
-            ctaLabel: "Book Private Consultation",
+            ctaLabel: "Book Consultation",
             featured: true,
             badge: "Most Popular"
           },
@@ -71,23 +71,7 @@ export const siteContent = {
             idealFor:
               "For clients who want the highest level of hybrid coaching, tighter accountability, and the fastest path to results.",
             savings: "Save $632 with upfront payment",
-            ctaLabel: "Book Private Consultation",
-            badge: "",
-            featured: false
-          }
-        ]
-      },
-      {
-        name: "Hybrid Coaching Flex",
-        plans: [
-          {
-            name: "Hybrid Transformation",
-            price: "From $149/week",
-            minimumTerm: "12-week minimum",
-            idealFor:
-              "For clients who want a flexible hybrid structure with online coaching plus in-person support and accountability.",
-            savings: "Save $252 with upfront payment",
-            ctaLabel: "Book Private Consultation",
+            ctaLabel: "Book Consultation",
             badge: "",
             featured: false
           }
@@ -119,7 +103,7 @@ export const siteContent = {
             idealFor:
               "For clients who want their nutrition aligned with their training through tailored calorie and macro targets, food guidance, and ongoing adjustments.",
             savings: "",
-            ctaLabel: "Book Private Consultation",
+            ctaLabel: "Book Consultation",
             badge: "",
             featured: false
           }
