@@ -3,6 +3,7 @@ export const leadStatuses = [
   "contacted",
   "consult-booked",
   "proposal-sent",
+  "onboarding-sent",
   "won",
   "lost"
 ] as const;

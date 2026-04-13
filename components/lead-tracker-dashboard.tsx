@@ -54,6 +54,7 @@ const statusTone: Record<LeadStatus, string> = {
   contacted: "border-amber-400/30 bg-amber-400/10 text-amber-100",
   "consult-booked": "border-violet-400/30 bg-violet-400/10 text-violet-100",
   "proposal-sent": "border-orange-400/30 bg-orange-400/10 text-orange-100",
+  "onboarding-sent": "border-cyan-400/30 bg-cyan-400/10 text-cyan-100",
   won: "border-emerald-400/30 bg-emerald-400/10 text-emerald-100",
   lost: "border-rose-400/30 bg-rose-400/10 text-rose-100"
 };
@@ -322,6 +323,14 @@ export function LeadTrackerDashboard({
                     >
                       Consult booked
                     </button>
+                    <a
+                      href="/onboarding"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-full border border-cyan-300/30 px-4 py-2 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200 hover:text-white"
+                    >
+                      Open onboarding
+                    </a>
                   </div>
                 </article>
               ))
@@ -555,6 +564,23 @@ export function LeadTrackerDashboard({
                           Mark contacted now
                         </button>
 
+                        <button
+                          type="button"
+                          onClick={() => updateLead(lead.id, { status: "onboarding-sent" })}
+                          className="rounded-2xl border border-cyan-300/30 bg-cyan-500/20 px-5 py-4 text-base font-semibold text-cyan-100 transition hover:border-cyan-200 hover:bg-cyan-500/30"
+                        >
+                          Mark onboarding sent
+                        </button>
+
+                        <a
+                          href="/onboarding"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="rounded-2xl border border-yellow-300/30 bg-yellow-300/10 px-5 py-4 text-base font-semibold text-yellow-100 transition hover:border-yellow-200 hover:bg-yellow-300/20"
+                        >
+                          Open onboarding form
+                        </a>
+
                         <div className="rounded-2xl border border-white/20 bg-slate-950/50 px-5 py-4 text-base text-slate-300">
                           <p className="text-sm uppercase tracking-[0.18em] text-yellow-300">Last contacted</p>
                           <p className="mt-2 break-words leading-7">{formatDate(lead.last_contacted_at)}</p>
@@ -564,6 +590,19 @@ export function LeadTrackerDashboard({
                           <p className="text-sm uppercase tracking-[0.18em] text-yellow-300">Next follow-up</p>
                           <p className="mt-2 break-words leading-7">{formatDate(lead.next_follow_up_at)}</p>
                         </div>
+
+                        {(lead.status === "onboarding-sent" || lead.status === "won") ? (
+                          <div className="rounded-2xl border border-cyan-300/20 bg-cyan-300/10 px-5 py-4 text-base text-cyan-50">
+                            <p className="text-sm uppercase tracking-[0.18em] text-cyan-200">Onboarding checklist</p>
+                            <ul className="mt-3 space-y-2 text-sm leading-6 text-cyan-50/90">
+                              <li>Confirm payment and package.</li>
+                              <li>Send /onboarding form.</li>
+                              <li>Review health screening and injuries.</li>
+                              <li>Confirm training days and first check-in.</li>
+                              <li>Build program and nutrition starting point.</li>
+                            </ul>
+                          </div>
+                        ) : null}
                       </div>
                     </div>
                   </article>
