@@ -2,94 +2,102 @@ export const siteContent = {
   brand: {
     name: "Upper Notch Coaching",
     shortName: "Upper Notch",
-    eyebrow: "Upper Notch Coaching - Richmond, Melbourne",
-    consultationLink: "https://calendly.com/jazz04092005",
-    consultationLabel: "Book Consultation",
-    applicationLabel: "Apply for Coaching",
+    eyebrow: "Fat Loss · Lean Muscle · Simple Results",
+    consultationLink: "https://calendly.com/theuppernotch/30min",
+    consultationLabel: "Book Your Free Call",
+    applicationLabel: "Book Your Free Call",
     location: "Richmond, Melbourne, Victoria"
   },
   hero: {
-    headline: "Build a body and mindset that integrates into every part of your life.",
+    headline: "Fat Loss & Lean Muscle Gain Made Simple",
     subheading:
-      "Upper Notch Coaching helps busy men and women look, feel, and perform at their best through fat loss, strength and muscle gain, improved performance, accountability, and clear, structured direction through evidence-based training. Based in Richmond, Melbourne.",
+      "Stop guessing. Stop starting over. Book a free phone call and get a clear plan built around your body and your goals — so you can finally see results that actually last.",
     highlights: [
-      "Reach your potential and turn it up a notch",
-      "Transform your routine, not just your workouts",
-      "Evidence-based coaching built for real life"
+      "Free phone call — no obligation, no pressure",
+      "Fat loss & lean muscle made simple",
+      "Built around your lifestyle & schedule"
     ]
   },
   about: {
-    title: "High-standard coaching for people who want more from themselves.",
+    title: "Coaching that makes getting lean feel simple.",
     description:
-      "Upper Notch Coaching is built for people who want serious progress without letting training take over their life. The goal is simple: create a stronger body, a sharper mindset, and a standard you can carry into work, relationships, and everything else that matters.",
+      "You don't need another generic plan or a diet that makes you miserable. You need a clear system, a coach in your corner, and a process that actually fits your life. That's exactly what this is.",
     coachName: "Jazzay Sallah",
-    coachRole: "Personal Trainer",
+    coachRole: "Personal Trainer & Nutrition Coach",
     coachCardText:
-      "Evidence-based coaching for clients who want structure, discipline, and results that actually last.",
+      "Helping busy people lose fat, build lean muscle, and finally feel confident in their body — through structured coaching, real accountability, and a process that's built to last.",
     points: [
-      "Training here is not random. Every phase is built around your current level, your lifestyle, and the result you are chasing.",
-      "Jazzay combines strength training, functional movement, and aerobic performance to improve body composition, fitness, and confidence at the same time.",
-      "With Cert III and IV in Fitness, coaching is grounded in proven principles, not trends, shortcuts, or guesswork.",
-      "Nutrition support is part of the standard. Clients get practical guidance and personalised direction that supports performance, recovery, and long-term results."
+      "Fat loss and lean muscle gain don't have to be complicated. With the right structure and the right coach, the process becomes straightforward — and the results compound fast.",
+      "Every program is built around your goals, your starting point, and your schedule. No cookie-cutter templates. No guesswork. Just a clear plan you can follow.",
+      "Nutrition is built in from day one — practical targets and real-world guidance that fit your lifestyle, not a meal plan you'll quit in two weeks.",
+      "Weekly check-ins and direct support keep you accountable between sessions so consistency stops being the hard part."
     ],
-    closing: "Look good. Feel good. Perform at your best."
+    closing: "Invest in yourself. The results will follow."
   },
   services: {
-    title: "Choose the level of coaching that matches your standard.",
+    title: "Simple coaching options. Real results.",
     description:
-      "Every option is designed to create momentum. The difference is the speed of progress, the level of support, and how closely you want your training held to a higher standard.",
+      "Whether you're training in-person in Richmond or fully online, every option is built around the same goal: fat loss, lean muscle gain, and a process you can actually stick to.",
     categories: [
       {
-        name: "Hybrid Coaching",
+        name: "Coaching Options",
         plans: [
           {
             name: "Foundation",
-            price: "From $129/week",
-            minimumTerm: "12-week minimum",
-            idealFor:
-              "For building consistency, confidence, and a strong baseline with expert guidance each week.",
-            savings: "Save $172 with upfront payment",
-            ctaLabel: "Book Consultation",
+            idealFor: "Build consistency and start seeing results",
             badge: "",
-            featured: false
+            featured: false,
+            results: [
+              "Develop strong fat loss and muscle-building habits",
+              "Improve confidence and motivation",
+              "Build a sustainable routine around your schedule",
+              "Make consistent, measurable progress"
+            ],
+            inclusions: [
+              "1x personal training session per week",
+              "Structured fat loss & muscle gain program",
+              "Weekly check-ins and habit tracking: steps, sleep, water",
+              "Basic support for accountability and consistency",
+              "Coaching app access"
+            ]
           },
           {
             name: "Transformation",
-            price: "From $199/week",
-            minimumTerm: "12-week minimum",
-            idealFor:
-              "For clients ready to make noticeable physique and performance changes with more support, more accountability, and more momentum.",
-            savings: "Save $432 with upfront payment",
-            ctaLabel: "Book Consultation",
+            idealFor: "Faster fat loss and lean muscle with full support",
+            badge: "Most Popular",
             featured: true,
-            badge: "Most Popular"
+            results: [
+              "Faster fat loss and lean muscle results",
+              "Higher accountability and motivation",
+              "Noticeable physique changes you can see and feel",
+              "Stay locked in with regular guidance"
+            ],
+            inclusions: [
+              "2x personal training sessions per week",
+              "Progressively updated training program",
+              "Weekly check-ins and direct messaging support: Mon–Fri",
+              "Technique feedback and habit coaching system",
+              "Coaching app access"
+            ]
           },
           {
             name: "Elite",
-            price: "From $289/week",
-            minimumTerm: "12-week minimum",
-            idealFor:
-              "For clients who want the highest level of hybrid coaching, tighter accountability, and the fastest path to results.",
-            savings: "Save $632 with upfront payment",
-            ctaLabel: "Book Consultation",
+            idealFor: "The fastest path to fat loss and lean muscle gain",
             badge: "",
-            featured: false
-          }
-        ]
-      },
-      {
-        name: "Online Coaching",
-        plans: [
-          {
-            name: "Online Coaching",
-            price: "From $89/week",
-            minimumTerm: "8-week minimum",
-            idealFor:
-              "For clients who want a structured plan, weekly accountability, and expert direction while training on their own schedule.",
-            savings: "Save $80 with upfront payment",
-            ctaLabel: "Apply for Coaching",
-            badge: "",
-            featured: false
+            featured: false,
+            results: [
+              "Fastest rate of fat loss and muscle gain possible",
+              "Highest level of accountability and motivation",
+              "Full lifestyle and performance optimisation",
+              "Everything dialled in for you with no guesswork"
+            ],
+            inclusions: [
+              "3x personal training sessions per week",
+              "Fully customised training and progression system",
+              "Priority check-ins and unlimited support",
+              "Weekly program and lifestyle optimisation",
+              "Coaching app access"
+            ]
           }
         ]
       },
@@ -98,14 +106,20 @@ export const siteContent = {
         plans: [
           {
             name: "Nutrition Coaching Add-On",
-            price: "Add to any coaching option",
-            minimumTerm: "",
-            idealFor:
-              "For clients who want their nutrition aligned with their training through tailored calorie and macro targets, food guidance, and ongoing adjustments.",
-            savings: "",
-            ctaLabel: "Book Consultation",
+            idealFor: "Align your nutrition with your fat loss and muscle gain goals",
             badge: "",
-            featured: false
+            featured: false,
+            results: [
+              "Personalised calorie and macro targets",
+              "Practical food guidance that fits your lifestyle",
+              "Better recovery and body composition"
+            ],
+            inclusions: [
+              "Tailored calorie and macro targets",
+              "Meal structure guidance",
+              "Weekly nutrition check-in and adjustments",
+              "Accountability support"
+            ]
           }
         ]
       }
@@ -114,7 +128,7 @@ export const siteContent = {
   testimonials: {
     title: "Clients stay because the process works.",
     description:
-      "The best transformations come from consistency, clear expectations, and coaching that keeps standards high. The reviews below are launch placeholders and should be replaced with real client feedback once available.",
+      "The best transformations come from consistency, clear expectations, and coaching that keeps standards high.",
     items: [
       {
         quote:
@@ -130,59 +144,112 @@ export const siteContent = {
       },
       {
         quote:
-          "Upper Notch Coaching made training feel simple again. I knew exactly what to do, my nutrition improved, and I finally saw real changes in how I looked and performed.",
+          "Upper Notch Coaching made fat loss feel simple. I knew exactly what to do, my nutrition improved, and I finally saw real changes in how I looked and performed.",
         name: "Placeholder Review",
-        result: "Hybrid coaching client"
+        result: "Transformation client"
       }
     ]
   },
   faq: {
-    title: "Everything you need to know before you get started.",
+    title: "Clear answers before you book.",
     description:
-      "The right coaching experience should feel clear from the start. These are the questions most people ask before taking the next step.",
+      "Fat loss and muscle gain coaching should feel simple from the start. Here are the questions people ask before booking their free call.",
     items: [
       {
-        question: "Is this only for people who are already fit?",
+        question: "What happens on the free call?",
         answer:
-          "No. Upper Notch Coaching is built around your starting point. Whether you are rebuilding momentum or already training consistently, the plan is matched to your level and progressed properly."
+          "It's a free 30-minute phone call. We talk through your goals, where you're at right now, what's worked and what hasn't, and figure out the right plan for you. No pressure. No obligation. Just clarity."
+      },
+      {
+        question: "Is this for fat loss, muscle gain, or both?",
+        answer:
+          "Both. Coaching is built around your primary goal — whether that's losing fat, building lean muscle, or improving overall body composition. Most clients are working toward both at once."
       },
       {
         question: "What if my schedule is busy or inconsistent?",
         answer:
-          "That is exactly why the coaching is structured the way it is. The training system is designed to fit around real life so you can stay consistent without everything feeling excessive or unsustainable."
+          "That is exactly who this is built for. Training is structured around your week so the plan is realistic and easy to stick to. Most clients are busy professionals who couldn't make a generic program work."
       },
       {
         question: "Will I get nutrition support as well?",
         answer:
-          "Yes. Nutrition is a major part of results. Coaching includes practical nutrition guidance, and there is also a dedicated nutrition coaching add-on for more personalised support."
-      },
-      {
-        question: "How do I know which option is right for me?",
-        answer:
-          "That is what the consultation is for. You will talk through your current situation, your goals, and the level of support that makes the most sense for you."
+          "Yes. Nutrition is a major part of fat loss and muscle gain results. Coaching includes practical nutrition guidance, and there is also a dedicated nutrition coaching add-on for more personalised support."
       }
     ]
   },
   leadForm: {
-    title: "Apply for coaching and see if you're the right fit.",
+    title: "Not ready to book yet? Drop your details.",
     description:
-      "This is not a generic gym enquiry. It is a short application for people who are serious about changing how they look, perform, and show up. If it looks like a strong fit, the next step is a private consultation.",
-    note:
-      "Applications are reviewed personally. Coaching spots are kept limited so every client gets a high standard of attention.",
-    fitPoints: [
-      "Busy professionals who want a clear plan and strong accountability",
-      "Men and women aiming to lose fat, build muscle, or lift performance",
-      "People ready to invest in coaching that feels structured and premium"
-    ]
-  },
-  booking: {
-    title: "Book a private consultation.",
-    description:
-      "If you already know you are ready, you can book a private consultation directly. This is the best option for people who want clarity quickly and are prepared to move."
-  },
-  cta: {
-    title: "Reach your potential. Are you ready to turn it up a notch?",
-    description:
-      "Transform your routine, not just your workouts. Book your consultation today."
-  }
-} as const;
+      "Fill in the form
+
+cat > components/sections/hero-section.tsx << 'EOF'
+import { Button } from "@/components/ui/button";
+import { SiteHeader } from "@/components/ui/site-header";
+import { siteContent } from "@/lib/site-content";
+export function HeroSection() {
+  return (
+    <section id="top" className="relative pb-16 pt-4 sm:pb-20">
+      <div className="absolute inset-0 -z-10 bg-grid bg-[size:42px_42px] opacity-[0.12]" />
+      <div className="absolute left-1/2 top-20 -z-10 h-96 w-96 -translate-x-1/2 rounded-full bg-white/25 blur-3xl" />
+      <SiteHeader />
+      <div className="container-shell grid gap-10 pt-14 sm:pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:pt-20">
+        <div className="rounded-[2rem] border border-white/80 bg-white/95 p-5 text-slate-950 shadow-[0_24px_70px_rgba(3,55,104,0.18)] backdrop-blur sm:p-8">
+          <p className="mb-4 text-sm font-black uppercase tracking-[0.35em] text-accent">
+            {siteContent.brand.eyebrow}
+          </p>
+          <h1 className="max-w-4xl text-6xl uppercase leading-[0.88] text-slate-950 sm:text-7xl lg:text-8xl">
+            {siteContent.hero.headline}
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-slate-700 sm:text-xl">
+            {siteContent.hero.subheading}
+          </p>
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+            
+              href={siteContent.brand.consultationLink}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-accent bg-accent px-6 py-3 text-sm font-extrabold uppercase tracking-[0.18em] text-canvas shadow-[0_14px_35px_rgba(255,210,63,0.35)] transition hover:-translate-y-0.5 hover:bg-[#ffe26f]"
+            >
+              {siteContent.brand.consultationLabel}
+            </a>
+          </div>
+          <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+            Free 30-min call · No obligation
+          </p>
+          <div className="mt-10 grid gap-3 sm:grid-cols-3">
+            {siteContent.hero.highlights.map((item) => (
+              <div key={item} className="rounded-3xl border border-sky-200 bg-sky-50 p-4">
+                <p className="text-sm font-semibold leading-6 text-slate-700">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="relative overflow-hidden rounded-[2.4rem] border border-white/80 bg-white/90 p-5 text-canvas shadow-[0_24px_70px_rgba(3,55,104,0.18)] sm:p-8">
+          <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-cta/45 blur-2xl" />
+          <div className="absolute -bottom-16 -left-16 h-44 w-44 rounded-full bg-accent/55 blur-2xl" />
+          <div className="relative mx-auto max-w-[430px] rounded-[2rem] border border-black/10 bg-white/80 p-5 shadow-2xl backdrop-blur sm:p-8">
+            <div className="mx-auto flex max-w-[340px] justify-center rounded-[1.75rem] border border-black/10 bg-white/95 px-6 py-5 shadow-[0_18px_35px_rgba(15,23,42,0.16)]">
+              <img
+                src="/upper-notch-logo-badge.png"
+                alt="Upper Notch Coaching logo"
+                className="h-auto w-full object-contain"
+              />
+            </div>
+          </div>
+          <div className="relative mt-5 grid gap-3 sm:grid-cols-3">
+            {[
+              ["Look", "Better"],
+              ["Feel", "Stronger"],
+              ["Perform", "Higher"]
+            ].map(([title, label]) => (
+              <div key={title} className="rounded-2xl border border-sky-200 bg-white/95 p-4 text-slate-950 shadow-[0_16px_34px_rgba(3,55,104,0.14)]">
+                <p className="text-xl font-black uppercase tracking-[0.08em] text-accent">{title}</p>
+                <p className="mt-1 text-xs font-bold uppercase tracking-[0.18em] text-slate-600">{label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
