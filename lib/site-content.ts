@@ -3,7 +3,7 @@ export const siteContent = {
     name: "Upper Notch Coaching",
     shortName: "Upper Notch",
     eyebrow: "Fat Loss · Lean Muscle · Simple Results",
-    consultationLink: "https://calendly.com/theuppernotch/30min",
+    consultationLink: "#book",
     consultationLabel: "Book Your Free Call",
     applicationLabel: "Book Your Free Call",
     location: "Richmond, Melbourne, Victoria"

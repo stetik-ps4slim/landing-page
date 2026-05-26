@@ -24,8 +24,8 @@ export function HeroSection() {
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
             <a
               href={siteContent.brand.consultationLink}
-              target="_blank"
-              rel="noreferrer"
+             
+             
               className="inline-flex items-center justify-center rounded-full border border-accent bg-accent px-6 py-3 text-sm font-extrabold uppercase tracking-[0.18em] text-canvas shadow-[0_14px_35px_rgba(255,210,63,0.35)] transition hover:-translate-y-0.5 hover:bg-[#ffe26f]"
             >
               {siteContent.brand.consultationLabel}

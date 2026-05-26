@@ -17,8 +17,8 @@ export function SiteHeader() {
         <Button
           href={siteContent.brand.consultationLink}
           className="border-accent bg-accent px-4 py-2 text-xs text-canvas shadow-[0_14px_35px_rgba(255,210,63,0.35)] hover:bg-[#ffe26f]"
-          target="_blank"
-          rel="noreferrer"
+         
+         
         >
           {siteContent.brand.consultationLabel}
         </Button>

@@ -25,7 +25,7 @@ export function ServicesSection() {
 
               <div
                 className={`grid gap-5 ${
-                  category.plans.length >= 3 ? "lg:grid-cols-3" : "lg:grid-cols-1"
+                  category.plans.length >= 3 ? "lg:grid-cols-3" : "lg:grid-cols-1 max-w-xl mx-auto"
                 }`}
               >
                 {category.plans.map((plan) => (
@@ -37,40 +37,54 @@ export function ServicesSection() {
                         : ""
                     }`}
                   >
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-accent">
-                          {plan.badge ?? "Coaching Package"}
-                        </p>
-                        <h3 className="mt-3 text-4xl uppercase leading-none text-slate-950">
-                          {plan.name}
-                        </h3>
-                        <p className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-slate-700">
-                          {plan.price}
-                        </p>
-                        {plan.minimumTerm ? (
-                          <p className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">
-                            {plan.minimumTerm}
-                          </p>
-                        ) : null}
-                      </div>
+                    {plan.badge ? (
+                      <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-accent">
+                        {plan.badge}
+                      </p>
+                    ) : null}
+
+                    <h3 className="text-4xl uppercase leading-none text-slate-950">
+                      {plan.name}
+                    </h3>
+                    <p className="mt-3 text-base leading-7 text-slate-700">{plan.idealFor}</p>
+
+                    {/* Results */}
+                    <div className="mt-6">
+                      <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-slate-950">
+                        Results &amp; Benefits
+                      </p>
+                      <ul className="space-y-2">
+                        {plan.results.map((result) => (
+                          <li key={result} className="flex items-start gap-2 text-sm leading-6 text-slate-700">
+                            <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                            {result}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
 
-                    <p className="mt-5 text-base leading-7 text-slate-700">{plan.idealFor}</p>
-
-                    {plan.savings ? (
-                      <div className="mt-6 rounded-2xl border border-accent/40 bg-accent/15 px-4 py-3 text-sm font-semibold text-slate-800">
-                        {plan.savings}
-                      </div>
-                    ) : null}
+                    {/* Inclusions */}
+                    <div className="mt-6">
+                      <p className="mb-3 text-xs font-black uppercase tracking-[0.22em] text-slate-950">
+                        What&apos;s Included
+                      </p>
+                      <ul className="space-y-2">
+                        {plan.inclusions.map((item) => (
+                          <li key={item} className="flex items-start gap-2 text-sm leading-6 text-slate-700">
+                            <span className="mt-1 text-accent">✓</span>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
 
                     <a
                       href={siteContent.brand.consultationLink}
-                      target="_blank"
-                      rel="noreferrer"
+                     
+                     
                       className="mt-8 inline-flex w-fit items-center rounded-full border border-accent bg-accent px-5 py-3 text-sm font-extrabold uppercase tracking-[0.18em] text-canvas shadow-[0_14px_35px_rgba(255,210,63,0.28)] transition hover:-translate-y-0.5 hover:bg-[#ffe26f]"
                     >
-                      {plan.ctaLabel}
+                      Book Consultation
                     </a>
                   </article>
                 ))}
