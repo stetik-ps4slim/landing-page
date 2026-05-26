@@ -22,7 +22,6 @@ export function HeroSection() {
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-            <Button href="#lead-form">{siteContent.brand.applicationLabel}</Button>
             <a
               href={siteContent.brand.consultationLink}
               target="_blank"
