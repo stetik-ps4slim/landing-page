@@ -35,61 +35,69 @@ export const siteContent = {
     closing: "Invest in yourself. The results will follow."
   },
   services: {
-    title: "Choose the level of coaching that matches your standard.",
+    title: "Simple coaching options. Real results.",
     description:
-      "Every option is designed to create momentum. The difference is the speed of progress, the level of support, and how closely you want your training held to a higher standard.",
+      "Every option is built around the same goal: fat loss, lean muscle gain, and a process you can actually stick to.",
     categories: [
       {
-        name: "Hybrid Coaching",
+        name: "Coaching Options",
         plans: [
           {
             name: "Foundation",
-            price: "From $129/week",
-            minimumTerm: "12-week minimum",
-            idealFor:
-              "For building consistency, confidence, and a strong baseline with expert guidance each week.",
-            savings: "Save $172 with upfront payment",
-            ctaLabel: "Book Consultation",
+            idealFor: "Build consistency and start seeing fat loss results",
             badge: "",
-            featured: false
+            featured: false,
+            results: [
+              "Develop strong fat loss and muscle-building habits",
+              "Improve confidence and motivation",
+              "Build a sustainable routine around your schedule",
+              "Make consistent, measurable progress"
+            ],
+            inclusions: [
+              "1x personal training session per week",
+              "Structured fat loss & muscle gain program",
+              "Weekly check-ins and habit tracking: steps, sleep, water",
+              "Basic support for accountability and consistency",
+              "Coaching app access"
+            ]
           },
           {
             name: "Transformation",
-            price: "From $199/week",
-            minimumTerm: "12-week minimum",
-            idealFor:
-              "For clients ready to make noticeable physique and performance changes with more support, more accountability, and more momentum.",
-            savings: "Save $432 with upfront payment",
-            ctaLabel: "Book Consultation",
+            idealFor: "Faster fat loss and lean muscle with full support",
+            badge: "Most Popular",
             featured: true,
-            badge: "Most Popular"
+            results: [
+              "Faster fat loss and lean muscle results",
+              "Higher accountability and motivation",
+              "Noticeable physique changes you can see and feel",
+              "Stay locked in with regular guidance"
+            ],
+            inclusions: [
+              "2x personal training sessions per week",
+              "Progressively updated training program",
+              "Weekly check-ins and direct messaging support: Mon–Fri",
+              "Technique feedback and habit coaching system",
+              "Coaching app access"
+            ]
           },
           {
             name: "Elite",
-            price: "From $289/week",
-            minimumTerm: "12-week minimum",
-            idealFor:
-              "For clients who want the highest level of hybrid coaching, tighter accountability, and the fastest path to results.",
-            savings: "Save $632 with upfront payment",
-            ctaLabel: "Book Consultation",
+            idealFor: "The fastest path to fat loss and lean muscle gain",
             badge: "",
-            featured: false
-          }
-        ]
-      },
-      {
-        name: "Online Coaching",
-        plans: [
-          {
-            name: "Online Coaching",
-            price: "From $89/week",
-            minimumTerm: "8-week minimum",
-            idealFor:
-              "For clients who want a structured plan, weekly accountability, and expert direction while training on their own schedule.",
-            savings: "Save $80 with upfront payment",
-            ctaLabel: "Apply for Coaching",
-            badge: "",
-            featured: false
+            featured: false,
+            results: [
+              "Fastest rate of fat loss and muscle gain possible",
+              "Highest level of accountability and motivation",
+              "Full lifestyle and performance optimisation",
+              "Everything dialled in for you with no guesswork"
+            ],
+            inclusions: [
+              "3x personal training sessions per week",
+              "Fully customised training and progression system",
+              "Priority check-ins and unlimited support",
+              "Weekly program and lifestyle optimisation",
+              "Coaching app access"
+            ]
           }
         ]
       },
@@ -98,20 +106,26 @@ export const siteContent = {
         plans: [
           {
             name: "Nutrition Coaching Add-On",
-            price: "Add to any coaching option",
-            minimumTerm: "",
-            idealFor:
-              "For clients who want their nutrition aligned with their training through tailored calorie and macro targets, food guidance, and ongoing adjustments.",
-            savings: "",
-            ctaLabel: "Book Consultation",
+            idealFor: "Align your nutrition with your fat loss and muscle gain goals",
             badge: "",
-            featured: false
+            featured: false,
+            results: [
+              "Personalised calorie and macro targets",
+              "Practical food guidance that fits your lifestyle",
+              "Better recovery and body composition"
+            ],
+            inclusions: [
+              "Tailored calorie and macro targets",
+              "Meal structure guidance",
+              "Weekly nutrition check-in and adjustments",
+              "Accountability support"
+            ]
           }
         ]
       }
     ]
   },
-  testimonials: {
+    testimonials: {
     title: "Clients stay because the process works.",
     description:
       "The best transformations come from consistency, clear expectations, and coaching that keeps standards high. The reviews below are launch placeholders and should be replaced with real client feedback once available.",
